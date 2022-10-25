@@ -14,16 +14,16 @@ export default function Home() {
             </Head>
 
       <main className={styles.main}>
-        <g>
-          <a href="/" className={styles.navback}>
-            <img height="30" src="../assets/Navigation/Home.png" alt="Home"/>
-          </a>
-        </g>
-        <g>
-          <a href="/login" className={styles.navlogin}>
-          <img height="30" src="../assets/Navigation/login.png" alt="Login"/>
-          </a>
-        </g>
+
+      <div className={styles.navdiv}>
+          <Link href="/" className={styles.navback}>
+            <Image height="30" src="../assets/Navigation/Home.png" alt="Home"/>
+          </Link>
+
+        <a href="/login">
+          <Image height="30" src="../assets/Navigation/login.png" alt="Login"/>
+        </a>
+      </div>
 
       <span className={styles.head}>
             <Image src="/assets/about_me/header_image.png" alt="Bobby68" width={1000} height={150} />
@@ -33,19 +33,19 @@ export default function Home() {
               <h1>💬 &nbsp;My Socialmedia&nbsp; 💬</h1>
         <hr className={styles.hr}/>
             <a href="https://discord.com/users/528982743623925781" target="_blank">
-              <img height="50" src="https://img.icons8.com/color/344/discord-new-logo.png"/>
+              <Image height="50" src="https://Image.icons8.com/color/344/discord-new-logo.png"/>
             </a>
             <a href="https://live.xbox.com/Profile?Gamertag=Bobby3498" target="_blank">
-              <img height="50" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Xbox_one_logo.svg/2048px-Xbox_one_logo.svg.png"/>
+              <Image height="50" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Xbox_one_logo.svg/2048px-Xbox_one_logo.svg.png"/>
             </a>
             <a href="https://github.com/luca-naujoks" target="_blank">
-              <img height="100" src="/assets/about_me/GitHub-Mark-Light-120px-plus.png"/>
+              <Image height="100" src="/assets/about_me/GitHub-Mark-Light-120px-plus.png"/>
             </a>
             <a href="https://www.instagram.com/anonymes_bobby68/" target="_blank">
-              <img height="50" src="https://user-images.githubusercontent.com/46517096/166974368-9798f39f-1f46-499c-b14e-81f0a3f83a06.png"/>
+              <Image height="50" src="https://user-images.githubusercontent.com/46517096/166974368-9798f39f-1f46-499c-b14e-81f0a3f83a06.png"/>
             </a>
             <a href="https://www.youtube.com/channel/UCjPMp9s9WDkeJy2Ta5vjh0A/featured" target="_blank">
-              <img height="50" src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png"/>
+              <Image height="50" src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png"/>
             </a>
         </div>
 
@@ -70,14 +70,14 @@ export default function Home() {
                         <p></p>
                         <div><span className={styles.pl_ent}>fields_of_interests</span>:</div>
                         <div><span className={styles.pl_s}>[</span></div>
-                        <div><span className={styles.pl_s}><span className={styles.pl_pds}> "</span>Web Development<span className={styles.pl_pds}>"</span></span><span className={styles.pl_s}>,</span></div>
-                        <div><span className={styles.pl_s}><span className={styles.pl_pds}> "</span>Data Science<span className={styles.pl_pds}>"</span></span><span className={styles.pl_s}>,</span></div>
-                        <div><span className={styles.pl_s}><span className={styles.pl_pds}> "</span>Machine Learning<span className={styles.pl_pds}>"</span></span><span className={styles.pl_s}>,</span></div>
-                        <div><span className={styles.pl_s}><span className={styles.pl_pds}> "</span>Game Development<span className={styles.pl_pds}>"</span></span><span className={styles.pl_s}>,</span></div>
+                        <div><span className={styles.pl_s}><span className={styles.pl_pds1}> "</span>Web Development<span className={styles.pl_pds}>"</span></span><span className={styles.pl_s}>,</span></div>
+                        <div><span className={styles.pl_s}><span className={styles.pl_pds1}> "</span>Data Science<span className={styles.pl_pds}>"</span></span><span className={styles.pl_s}>,</span></div>
+                        <div><span className={styles.pl_s}><span className={styles.pl_pds1}> "</span>Machine Learning<span className={styles.pl_pds}>"</span></span><span className={styles.pl_s}>,</span></div>
+                        <div><span className={styles.pl_s}><span className={styles.pl_pds1}> "</span>Game Development<span className={styles.pl_pds}>"</span></span><span className={styles.pl_s}>,</span></div>
                         <div><span className={styles.pl_s}>]</span></div>
                         <div><span className={styles.pl_ent}>technical_background</span>:</div>
                         <div><span className={styles.pl_s}>[</span></div>
-                        <div> <span className={styles.pl_s}><span className={styles.pl_pds}>"</span>IT system electronics technician<span className={styles.pl_pds}>"</span></span></div>
+                        <div> <span className={styles.pl_s}><span className={styles.pl_pds1}>"</span>IT system electronics technician<span className={styles.pl_pds}>"</span></span></div>
                         <div><span className={styles.pl_s}>]</span></div>
                         <div></div>
                         <div><span className={styles.pl_ent}>currently_learning</span>: <span className={styles.pl_s}>["Docker, Angular"]</span></div>
@@ -91,33 +91,35 @@ export default function Home() {
 
             <h2> 🚀 &nbsp;Some Tools / Languages I Use&nbsp; 🚀</h2>
               <p align="left">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="vscode" width="45" height="45"/>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/1/1d/PyCharm_Icon.svg"
+                <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="vscode" width="45" height="45"/>
+                <Image src="https://upload.wikimedia.org/wikipedia/commons/1/1d/PyCharm_Icon.svg"
                 alt="PyCharm" width="45" height="45"/>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/9/9c/IntelliJ_IDEA_Icon.svg"
+                <Image src="https://upload.wikimedia.org/wikipedia/commons/9/9c/IntelliJ_IDEA_Icon.svg"
                 alt="IntelliJ" width="45" height="45"/>
               </p>
               
               <p align="left">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="docker" width="45" height="45"/>
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="linux" width="45" height="45"/>
-                <img src="https://www.kim-bewertung.de/wp-content/uploads/2021/06/Windows-10-Icon.png" alt="Windows" width="45" height="45"/>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Icon-Mac.svg/256px-Icon-Mac.svg.png"
+                <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="docker" width="45" height="45"/>
+                <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="linux" width="45" height="45"/>
+                <Image src="https://www.kim-bewertung.de/wp-content/uploads/2021/06/Windows-10-Icon.png" alt="Windows" width="45" height="45"/>
+                <Image src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Icon-Mac.svg/256px-Icon-Mac.svg.png"
                 alt="Mac OS/IOS" width="45"height="45"/>
               </p>
               
               <p align="left">
-                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original-wordmark.svg" alt="python" width="45" height="45" />
-                <img src="https://cdn-icons-png.flaticon.com/512/5968/5968282.png" alt="python" width="45" height="45" />
-                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="45" height="45" />
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="html" width="45" height="45"/>
-                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="45" height="45" />
+                <Image src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original-wordmark.svg" alt="python" width="45" height="45" />
+                <Image src="https://cdn-icons-png.flaticon.com/512/5968/5968282.png" alt="python" width="45" height="45" />
+                <Image src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="45" height="45" />
+                <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="html" width="45" height="45"/>
+                <Image src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="45" height="45" />
               </p>
               
               <p align="left">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="git" width="45" height="45"/>
-                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="mysql" width="45" height="45" />
+                <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="git" width="45" height="45"/>
+                <Image src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="mysql" width="45" height="45" />
               </p>
+
+
 
 
 
