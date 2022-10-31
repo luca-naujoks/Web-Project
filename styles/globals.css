@@ -1,0 +1,28 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Stencil;
+  background-color: #f0f0f0; /*sanfteres weiß*/
+  color: #0c0c0c;
+  height: 220vh;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    color: #f0f0f0;
+    background-color: black;
+  }
+}
