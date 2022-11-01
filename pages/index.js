@@ -1,7 +1,7 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
-import Link from 'next/link'
+import Head from "next/head";
+import Image from "next/image";
+import styles from "../styles/Home.module.css";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -14,24 +14,24 @@ export default function Home() {
 
       <div className={styles.navdiv}>
         <div>
-        <a href="/login" className={styles.nav}>
-          <img height="40" src="../assets/Navigation/login.png" alt="Login"/>
-        </a>
+          <a href="/login" className={styles.nav}>
+            <img height="40" src="../assets/Navigation/login.png" alt="Login" />
+          </a>
         </div>
       </div>
 
       <main className={styles.main}>
         <svg height="100%" width="100%" className={styles.svg}>
-                  <clipPath id="text-overlay">
-                      <text x="50%" y="50%" fill="red" text-anchor="middle">
-                          Bobby68
-                  </text>
-                  </clipPath>
-              </svg>
+          <clipPath id="text-overlay">
+            <text x="50%" y="50%" fill="red" textAnchor="middle">
+              Bobby68
+            </text>
+          </clipPath>
+        </svg>
 
-              <video autoPlay loop muted className={styles.video}>
-              <source src="/assets/background.mp4" type="video/mp4"/>
-              </video>
+        <video autoPlay loop muted className={styles.video}>
+          <source src="/assets/background.mp4" type="video/mp4" />
+        </video>
 
         <div className={styles.grid}>
           <a href="/about_me" className={styles.card}>
@@ -43,9 +43,8 @@ export default function Home() {
             <h2>Nooble &rarr;</h2>
             <p>The Learning part of this website</p>
           </a>
-
         </div>
       </main>
     </div>
-  )
+  );
 }
