@@ -79,3 +79,8 @@
     transform: scale(1.2);
     cursor: pointer;
 }
+
+.nav {
+    background-color: transparent;
+    border: none;
+  }

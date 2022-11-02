@@ -35,14 +35,26 @@
  
 }
 
-
-
 .grid {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  max-width: 800px;
+ 
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.6s;
+}
+
+.info {
+  transition: all 0.6s;
+}
+
+.info:hover {
+  transform: none;
 }
 
 .card {
@@ -60,8 +72,11 @@
 .card:hover,
 .card:focus,
 .card:active {
-  color: #0070f3;
-  border-color: #0070f3;
+  color: rgb(158, 75, 209);
+  border-color: rgb(158, 75, 209);
+  transform: scale(1.05);
+  cursor: pointer;
+  transition: all 0.6s;
 }
 
 .card h2 {
@@ -75,3 +90,7 @@
   line-height: 1.5;
 }
 
+.nav {
+  background-color: transparent;
+  border: none;
+}

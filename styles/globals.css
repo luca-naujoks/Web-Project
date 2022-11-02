@@ -3,9 +3,9 @@ body {
   padding: 0;
   margin: 0;
   font-family: Stencil;
-  background-color: #f0f0f0; /*sanfteres weiß*/
+  background-color: #000000; /*sanfteres weiß*/
   color: #0c0c0c;
-  height: 220vh;
+
 }
 
 a {
@@ -17,7 +17,7 @@ a {
   box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
+
   html {
     color-scheme: dark;
   }
@@ -25,4 +25,4 @@ a {
     color: #f0f0f0;
     background-color: black;
   }
-}
+

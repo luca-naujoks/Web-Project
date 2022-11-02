@@ -27,9 +27,9 @@ export default function Home() {
         <Link href="https://github.com/Filipza/LF3" className={styles.nav}>
             <img height="42" src="../assets/nooble/git.png" alt="git"/>
           </Link>
-        <a href="/login" className={styles.nav}>
-          <img height="40" src="../assets/Navigation/login.png" alt="Login"/>
-        </a>
+          <button href="/login" className={styles.nav}>
+            <img height="40" src="../assets/Navigation/login.png" alt="Login" />
+          </button>
         </div>
       </div>
 

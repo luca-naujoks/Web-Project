@@ -14,9 +14,9 @@ export default function Home() {
 
       <div className={styles.navdiv}>
         <div>
-          <a href="/login" className={styles.nav}>
+          <button href="/login" className={styles.nav}>
             <img height="40" src="../assets/Navigation/login.png" alt="Login" />
-          </a>
+          </button>
         </div>
       </div>
 
@@ -40,9 +40,19 @@ export default function Home() {
           </a>
 
           <a href="/nooble" className={styles.card}>
-            <h2>Nooble &rarr;</h2>
-            <p>The Learning part of this website</p>
+            <div className={styles.info}>
+              <h2>Nooble &rarr;</h2>
+              <p>The Learning part of this website</p>
+            </div>
+            </a>
+
+          <a href="/to-do" className={styles.card}>
+          <div className={styles.info}>
+            <h2>To-DO &rarr;</h2>
+            <p>A Simple To-Do List</p>
+          </div>
           </a>
+
         </div>
       </main>
     </div>

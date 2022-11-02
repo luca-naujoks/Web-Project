@@ -17,6 +17,11 @@
     cursor: pointer;
 }
 
+.nav {
+    background-color: transparent;
+    border: none;
+  }
+
 .info {
     background-color: #161b22;
     border-radius: 6px;
