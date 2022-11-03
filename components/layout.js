@@ -3,71 +3,47 @@ import Image from 'next/image'
 import styles from './layout.module.css'
 import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link'
+import { getPostData } from '../lib/posts'
 
-const name = '[Your Name]'
 export const siteTitle = 'Next.js Sample Website'
 
 export default function Layout({ children, home }) {
   return (
-    <div className={styles.container}>
+        <div className={styles.container}>
       <Head>
-        <link rel="icon" href="/favicon.ico" />
-        <meta
-          name="description"
-          content="Learn how to build a personal website using Next.js"
-        />
-        <meta
-          property="og:image"
-          content={`https://og-image.vercel.app/${encodeURI(
-            siteTitle
-          )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.zeit.co%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
-        />
-        <meta name="og:title" content={siteTitle} />
-        <meta name="twitter:card" content="summary_large_image" />
+        <title>Bobby68</title>
+        <link rel="icon" href="/Axolotl_Logo.png" />
       </Head>
-      <header className={styles.header}>
-        {home ? (
-          <>
-            <Image
-              priority
-              src="/images/profile.jpg"
-              className={utilStyles.borderCircle}
-              height={144}
-              width={144}
-              alt={name}
-            />
-            <h1 className={utilStyles.heading2Xl}>{name}</h1>
-          </>
-        ) : (
-          <>
-            <Link href="/">
-              <a>
-                <Image
-                  priority
-                  src="/images/profile.jpg"
-                  className={utilStyles.borderCircle}
-                  height={108}
-                  width={108}
-                  alt={name}
-                />
-              </a>
-            </Link>
-            <h2 className={utilStyles.headingLg}>
-              <Link href="/">
-                <a className={utilStyles.colorInherit}>{name}</a>
-              </Link>
-            </h2>
-          </>
-        )}
-      </header>
-      <main>{children}</main>
-      {!home && (
-        <div className={styles.backToHome}>
-          <Link href="/">
-            <a>← Back to home</a>
+      
+      <div className={styles.navdiv}>
+        <div>
+        <Link href="/nooble/nooble" className={styles.navback}>
+            <img height="30" src="../assets/Navigation/back.png" alt="Back"/>
+          </Link>
+          <Link href="/" className={styles.navhome}>
+            <img height="30" src="../assets/Navigation/Home.png" alt="Home"/>
           </Link>
         </div>
-      )}
+        <h1 className={styles.headline}> Nooble </h1>
+        <div>
+          <button href="/login" className={styles.nav}>
+            <img height="40" src="../assets/Navigation/login.png" alt="Login" />
+          </button>
+        </div>
+      </div>
+
+
+    <main className={styles.main}>
+
+    <div className={styles.info} >
+        <div className={styles.infohead}><h2>hallo</h2></div>
+    </div>
+    <div className={styles.info}>
+
+       
+    </div>
+
+      </main>
     </div>
   )
 }
