@@ -5,7 +5,7 @@ import Link from 'next/link'
 import Script from 'next/script'
 
 
-export default function Home() {
+export default function nooble() {
   return (
     <div className={styles.container}>
       <Head>

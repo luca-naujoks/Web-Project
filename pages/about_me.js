@@ -4,7 +4,7 @@ import styles from "../styles/about_me.module.css"
 import Link from "next/link"
 
 
-export default function Home() {
+export default function about_me() {
     return (
         <div className={styles.container}>
             <Head>
