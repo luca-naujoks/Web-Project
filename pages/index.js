@@ -21,8 +21,7 @@ export default function Home() {
       </div>
 
       <main className={styles.main}>
-	<a href="/ipv4.html">Ip Rechner</a>
-        <svg height="100%" width="100%" className={styles.svg}>
+        <svg height="80%" width="100%" className={styles.svg}>
           <clipPath id="text-overlay">
             <text x="50%" y="50%" fill="red" textAnchor="middle">
               Die IT Profis

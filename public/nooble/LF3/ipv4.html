@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Subnetz-Rechner</title>
+    <script type="module" crossorigin src="/assets/index.e9a1d7f0.js"></script>
+    <link rel="stylesheet" href="/assets/index.512e2493.css">
+  </head>
+  <body>
+    <div class="container mt-5">
+      <header>
+        <h1>Subnetz-Rechner</h1>
+      </header>
+      <main>
+        <section class="form-container">
+          <form>
+            <div class="mb-3">
+              <label for="ip">IP Adresse</label>
+              <div class="mt-1">
+                <input
+                  type="text"
+                  id="ip"
+                  placeholder="128.111.33.1"
+                  name="ip"
+                  autocomplete="off"
+                  required
+                />
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="mask-select">Maske</label>
+              <select id="mask-select" name="mask" required></select>
+            </div>
+            <div class="subnet-container">
+              <div class="subnets subnets-1 mb-3" data-firstInput="Subnet hinzufügen">
+                <div class="mt-1">
+                  <label for="subnet-1">Netzwerkname</label>
+                  <input type="text" id="subnet-1" name="subnet-1" required />
+                </div>
+                <div class="mt-1">
+                  <label for="host-num-1">Anzahl Hosts</label>
+                  <input type="number" id="host-num-1" name="host-num-1" min="1" required />
+                </div>
+                <div>
+                  <button
+                    type="button"
+                    id="add-subnet-btn-1"
+                    class="inline-flex items-center border h-1/2 border-transparent bg-slate-600 p-2 text-white shadow-sm hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2"
+                    title="Subnet hinzufügen"
+                  >
+                    <svg
+                      class="h-6 w-6"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M12 4.5v15m7.5-7.5h-15"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div>
+              <button type="submit">Berechnen</button>
+            </div>
+          </form>
+        </section>
+        <section class="table-container mt-8 hidden">
+          <table class="mb-5">
+            <thead>
+              <tr>
+                <th>Netzwerkname</th>
+                <th>Benötigte IPs</th>
+                <th>Zuteilbare IPs</th>
+                <th>CIDR</th>
+                <th>Subnetzmaske</th>
+                <th>Netzwerkadresse</th>
+                <th>Erste IP</th>
+                <th>Letzte IP</th>
+                <th>Broadcast-Adresse</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+          <button type="reset" class="btn back-btn">Zurück</button>
+        </section>
+      </main>
+    </div>
+
+  </body>
+</html>

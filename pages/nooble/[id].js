@@ -32,19 +32,24 @@ export default function Post({ postData }) {
     
     
         <main className={styles.main}>
-    
-        <div className={styles.info} >
-            <div className={styles.infohead}><h2>{postData.title}</h2></div>
+
+        <div className={styles.infohead}><h2>{postData.title}</h2></div>
+
+        <div className={styles.infoback}>
+          <h3>Übersicht:</h3>
+          {postData.info}
+          </div>
+
+        <div className={styles.links}>
+          <h3>Links:</h3>
+          <p><a href={postData.link1} target="_blank">{postData.title1}</a></p>
+          <p><a href={postData.link2} target="_blank">{postData.title2}</a></p>
+          <p><a href={postData.link3} target="_blank">{postData.title3}</a></p>
+          <p><a href={postData.link4} target="_blank">{postData.title4}</a></p>
         </div>
 
-        <div className={styles.information}>
-        <div className={styles.infoback}>
-          <div className={styles.infotext}>
-            {postData.info}    
-          </div>
-        </div>
         <Image src={postData.image} height={650} width={650} className={styles.image}></Image>
-        </div>
+
             </main>
         </div>
   )
