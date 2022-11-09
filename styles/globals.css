@@ -5,7 +5,6 @@ body {
   font-family: Stencil;
   background-color: #000000; /*sanfteres weiß*/
   color: #0c0c0c;
-
 }
 
 a {
@@ -13,16 +12,18 @@ a {
   text-decoration: none;
 }
 
+a:hover {
+  text-decoration: underline;
+}
+
 * {
   box-sizing: border-box;
 }
 
-
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: #f0f0f0;
-    background-color: black;
-  }
-
+html {
+  color-scheme: dark;
+}
+body {
+  color: #f0f0f0;
+  background-color: black;
+}
