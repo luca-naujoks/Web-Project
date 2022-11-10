@@ -15,5 +15,5 @@ title3: OpenWrt Router
 link4: http://itechprofis.cloud
 title4: Nextcloud
 
-image: "/assets/nooble/Netzwerk.png"
+image: "/assets/Netzwerksizze.png"
 ---
