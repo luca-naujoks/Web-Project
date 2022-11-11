@@ -24,7 +24,7 @@ export default function Home() {
         <svg height="80%" width="100%" className={styles.svg}>
           <clipPath id="text-overlay">
             <text x="50%" y="50%" fill="red" textAnchor="middle">
-              Die IT Profis
+              Bobby68
             </text>
           </clipPath>
         </svg>
