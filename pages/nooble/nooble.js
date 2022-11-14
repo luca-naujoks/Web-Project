@@ -21,8 +21,8 @@ export default function nooble() {
           </Link>
         <h1 className={styles.headline}> Nooble </h1>
         <div>
-        <Link href="https://github.com/Filipza/LF3" className={styles.navback}>
-            <img height="42" src="../assets/nooble/git.png" alt="git"/>
+        <Link href="https://github.com/luca-naujoks/Itech-IT2x" className={styles.navback}>
+            <img height="42" src="../assets/nooble/GitHub.png" alt="GitHub"/>
           </Link>
         <a href="/login" className={styles.navlogin}>
           <img height="40" src="../assets/Navigation/login.png" alt="Login"/>
