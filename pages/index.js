@@ -21,7 +21,7 @@ export default function Home() {
       </div>
 
       <main className={styles.main}>
-        <svg height="80%" width="100%" className={styles.svg}>
+        <svg height="70%" width="100%" className={styles.svg}>
           <clipPath id="text-overlay">
             <text x="50%" y="50%" fill="red" textAnchor="middle">
               Bobby68
@@ -30,7 +30,7 @@ export default function Home() {
         </svg>
 
         <video autoPlay loop muted className={styles.video}>
-          <source src="/assets/background.mp4" type="video/mp4" />
+          <source src="/assets/background.mp4" type="video/mp4"/>
         </video>
 
         <div className={styles.grid}>
@@ -54,6 +54,9 @@ export default function Home() {
           </a>
 
         </div>
+
+        
+
       </main>
     </div>
   );

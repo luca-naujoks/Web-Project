@@ -29,9 +29,7 @@ export default function Home() {
           </button>
         </div>
       </div>
-      <br></br>
       <hr className={styles.hr}/>
-      <br></br>
 
 
 

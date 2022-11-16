@@ -16,30 +16,32 @@ export default function about_me() {
       <main className={styles.main}>
       <div className={styles.navdiv}>
           <Link href="/">
-            <img height="30" width={30} src="../assets/Navigation/Home.png" alt="Home" className={styles.test}/>
+            <img height="30" width={30} src="../assets/Navigation/Home.png" alt="Home" className={styles.navhover}/>
           </Link>
         
         <a href="/login">
-          <img height="30" width={30} src="../assets/Navigation/login.png" alt="Login"/>
+          <img height="30" width={30} src="../assets/Navigation/login.png" alt="Login" className={styles.navhover}/>
         </a>
       </div>
 
-      <span className={styles.head}>
+      <span className={styles.headimg}>
             <Image src="/assets/about_me/header_image.png" alt="Bobby68" width={1000} height={150} />
           </span>
       
           <div className={styles.social}>
-              <h1>💬 &nbsp;My Socialmedia&nbsp; 💬</h1>
+              <h1 className={styles.head1}>💬 My Social Media 💬</h1>
         <hr className={styles.hr}/>
+        <div className={styles.image}>
             <a href="https://discord.com/users/528982743623925781" className={styles.socialmedia} target="_blank">
-              <Image height="100" width={100} src="/assets/about_me/Discord_Logo.svg"/>
+              <Image height={100} width={100} src="/assets/about_me/Discord_Logo.svg"/>
             </a>
             <a href="https://github.com/luca-naujoks" className={styles.socialmedia} target="_blank">
-              <Image height="100" width={100} src="/assets/about_me/GitHub-Mark-Light-120px-plus.png"/>
+              <Image height={100} width={100} src="/assets/about_me/GitHub-Mark-Light-120px-plus.png"/>
             </a>
             <a href="https://stackoverflow.com/users/20371424/bobby68" className={styles.socialmedia} target="_blank">
-              <Image height="100" width={100} src="/assets/about_me/Stack_Overflows.svg"/>
+              <Image height={100} width={100} src="/assets/about_me/Stack_Overflows.png"/>
             </a>
+         </div>
         </div>
 
         <p className={styles.gif}>
@@ -48,8 +50,8 @@ export default function about_me() {
         
         <hr className={styles.hr}/>
 
-        
-        <h2 > 👨🏻‍💻 &nbsp;A Little Bit About Me And My Interests</h2>
+
+        <h2 className={styles.head2}> 👨🏻‍💻 &nbsp;A Little Bit About Me And My Interests</h2>
  
             <div className={styles.info}>
                 <p></p>
@@ -82,7 +84,7 @@ export default function about_me() {
 
             <hr className={styles.hr}/>
 
-            <h2> 🚀 &nbsp;Some Tools / Languages I Use&nbsp; 🚀</h2>
+            <h2 className={styles.head2}> 🚀 &nbsp;Some Tools / Languages I Use&nbsp; 🚀</h2>
               <p align="left">
                 <Image src="/assets/about_me/vscode.svg" alt="vscode" width="45" height="45"/>
                 <Image src="/assets/about_me/PyCharm.svg"
@@ -112,7 +114,7 @@ export default function about_me() {
                 <Image src="/assets/about_me/mysql.svg" alt="mysql" width="45" height="45" />
               </p>
             <hr></hr>
-              <h2>&lt;../&gt; Discord / Bots / Programming &lt;\..&gt;</h2>
+              <h2 className={styles.head2}>&lt;../&gt; Discord / Bots / Programming &lt;\..&gt;</h2>
  
             <div className={styles.info}>
                 <p></p>

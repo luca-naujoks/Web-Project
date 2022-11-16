@@ -3,7 +3,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: Stencil;
-  background-color: #000000; /*sanfteres weiß*/
+  background-color: transparent; /*sanfteres weiß*/
   color: #0c0c0c;
 }
 

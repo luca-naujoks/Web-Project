@@ -7,8 +7,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 10px;
-    transition: 0.6s;
+    transition: 0.6s; 
   }
 
   .navdiv img:hover{
@@ -18,40 +17,9 @@
 }
 
 .nav {
-    background-color: transparent;
+   background-color: transparent;
     border: none;
   }
-
-.info {
-    background-color: #161b22;
-    border-radius: 6px;
-    /* Filips Vorschlag */
-    width: 50%;
-    margin: 2em;
-    transition: all 0.6s;
-    padding: 20px;
-}
-
-.info:hover {
-    transform: none;
-}
-
-.canclick:hover {
-    transform: scale(1.05);
-    cursor: pointer;
-    transition: all 0.6s;
-}
-
-.infotext {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-left: 5%;
-}
-
-.infohead {
-    padding-top: 5px;
-    margin-left: 2.5%
-}
 
 .pl_ent {
     color: #7ee787;
@@ -74,13 +42,24 @@
     padding-left: 10px;
 }
 
-.headline {
-    text-decoration: underline;
-}
 
 .hr {
-    width: 95%;
-    margin: 0 auto
+}
+/*
+Static Styles wich wont change with display Size
+*/
+
+.info:hover {
+    transform: none;
+}
+
+.infohead {
+    padding-top: 5px;
+    margin-left: 2.5%
+}
+
+.headline {
+    text-decoration: underline;
 }
 
 .card {
@@ -90,4 +69,54 @@
 .special {
     text-align: center;
     color: red;
+}
+
+/*
+Dynamic Styles
+*/
+
+@media only screen and (min-width:800px) {
+    .info {
+        background-color: #161b22;
+        border-radius: 6px;
+        /* Filips Vorschlag */
+        width: 30%;
+        margin: 2em;
+        transition: all 0.6s;
+        padding: 20px;
+    }
+
+    .infotext {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-left: 5%;
+    }
+    .canclick:hover {
+        transform: scale(1.05);
+        cursor: pointer;
+        transition: all 0.6s;
+    }
+}
+
+@media only screen and (max-width:799px) {
+    .info {
+        background-color: #161b22;
+        border-radius: 6px;
+        /* Filips Vorschlag */
+        width: 30%;
+        margin: 2em;
+        transition: all 0.6s;
+        padding: 20px; 
+    }
+
+    .infotext {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-left: 5%;
+    }
+    .canclick:hover {
+        transform: scale(1.02);
+        cursor: pointer;
+        transition: all 0.6s;
+    }
 }

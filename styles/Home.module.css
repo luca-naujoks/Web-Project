@@ -10,12 +10,11 @@
 }
 
 .svg {
-  
   position: absolute;
   z-index: -999;
   font-size: 8em;
-  top: 0;
-  left: 0;
+  height: 50%;
+  width: 50%;
 }
 
 .navdiv {
@@ -94,4 +93,8 @@
 .nav {
   background-color: transparent;
   border: none;
+}
+
+@media only screen and(max-width:799px) {
+  
 }

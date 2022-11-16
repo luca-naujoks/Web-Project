@@ -14,7 +14,7 @@ export default function Post({ postData }) {
 
       <div className={styles.navdiv}>
         <div>
-          <Link href="/nooble/nooble" className={styles.navback}>
+          <Link href="/nooble/" className={styles.navback}>
             <img height="30" src="../assets/Navigation/back.png" alt="Back" />
           </Link>
           <Link href="/" className={styles.navhome}>

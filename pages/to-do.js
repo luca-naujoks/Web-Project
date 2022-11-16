@@ -5,6 +5,9 @@ import Link from "next/link";
 
 export default function todo() {
     return(
-        <div></div>
+        <div>
+            <h1>Comming Soon</h1>
+        </div>
+        
     )
 }
