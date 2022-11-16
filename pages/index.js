@@ -21,8 +21,8 @@ export default function Home() {
       </div>
 
       <main className={styles.main}>
-        <svg height="70%" width="100%" className={styles.svg}>
-          <clipPath id="text-overlay">
+        <svg height="80%" width="100%" className={styles.svg}>
+          <clipPath id="overlay">
             <text x="50%" y="50%" fill="red" textAnchor="middle">
               Bobby68
             </text>
