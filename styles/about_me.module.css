@@ -1,25 +1,4 @@
-.headimg {
-    z-index: 0;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-}
 
-.main {
-    background-color: black;
-    padding-left: 5%;
-    padding-right: 5%;
-}
-
-.gif  {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.hr {
-    color: gray;
-}
 
 .data {
     text-align: center;

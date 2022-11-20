@@ -1,29 +1,3 @@
-.container {
-  margin: 2%;
-}
-
-.nav {
-  background-color: transparent;
-  border: none;
-}
-
-.navdiv {
-  display: flex;
-  justify-content: right;
-  transition: 0.6s;
-  z-index: 1;
-  position: relative;
-}
-
-.navdiv img:hover{
-  transform: scale(1.2);
-  transition: 0.6s;
-  cursor: pointer;
-  z-index: 1;
- 
-}
-/*###################################################*/
-
 .grid {
   display: flex;
   align-items: center;
@@ -41,43 +15,41 @@
   transition: all 0.6s;
 }
 
-.info:hover {
-  transform: none;
-}
-
 .card {
-  margin: 1rem;
-  padding: 1.5rem;
-  text-align: left;
   color: inherit;
-  text-decoration: none;
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
   transition: color 0.15s ease, border-color 0.15s ease;
-  width: 300px;
-  height: 200px;
+
 }
 
-.card:hover,
-.card:focus,
-.card:active {
-  color: rgb(158, 75, 209);
-  border-color: rgb(158, 75, 209);
-  transform: scale(1.05);
-  cursor: pointer;
-  transition: all 0.6s;
-}
 
-.card h2 {
-  margin: 0 0 1rem 0;
-  font-size: 1.5rem;
-}
 
-.card p {
-  margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.5;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*Mobile Screen*/
 @media only screen and (max-width:450px) {
@@ -95,11 +67,6 @@
     z-index: -999;
     font-size: 4.5em;
   }
-}
-
-/*Tablet Screen*/
-@media only screen and (max-width:700px) {
-  
 }
 
 /*Desktop Screen*/
