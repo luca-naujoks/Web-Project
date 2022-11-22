@@ -21,7 +21,7 @@ export default function Home() {
       </div>
 
       <main className={styles.main}>
-        <svg height="80%" width="100%" className={styles.svg}>
+        <svg height="100%" width="100%" className="absolute text-9xl font-bold">
           <clipPath id="overlay">
             <text x="50%" y="50%" fill="red" textAnchor="middle">
               Bobby68
@@ -35,21 +35,21 @@ export default function Home() {
 
         <div className="flex absolute justify-center items-center  left-1/2 top-3/4 -mr-1/2 -translate-x-1/2 -translate-y-1/2 transition-all duration-600">
           <a href="/about_me" className="w-80 h-48 border m-5 p-15 text-left no-underline border-white rounded-xl hover:scale-105 transition duration-700 ease-in-out hover:text-fuchsia-400 hover:border-fuchsia-400">
-          <div className="transition-all">
+          <div className="transition-all p-4">
             <h2 className="text-4xl m-1 hover:normal-case">About Me &rarr;</h2>
             <p className="text-2xl m-0 leading-6 hover:normal-case">Some Information About me and my Skills.</p>
           </div>
           </a>
 
           <a href="/nooble" className="w-80 h-48 border m-5 p-15 text-left no-underline border-white rounded-xl hover:scale-105 transition duration-700 ease-in-out hover:text-fuchsia-400 hover:border-fuchsia-400">
-            <div className="transition-all">
+            <div className="transition-all p-4">
               <h2 className="text-4xl m-1 hover:normal-case">Nooble &rarr;</h2>
               <p className="text-2xl m-0 leading-6 hover:normal-case">The Learning part of this website</p>
             </div>
             </a>
 
           <a href="/to-do" className="w-80 h-48 border m-5 p-15 text-left no-underline border-white rounded-xl hover:scale-105 transition duration-700 ease-in-out hover:text-fuchsia-400 hover:border-fuchsia-400">
-          <div className="transition-all">
+          <div className="transition-all p-4">
             <h2 className="text-4xl m-1 hover:normal-case">To-DO &rarr;</h2>
             <p className="text-2xl m-0 leading-6 hover:normal-case">A Simple To-Do List</p>
           </div>

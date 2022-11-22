@@ -1,5 +1,8 @@
+import Link from 'next/link'
+import Image from 'next/image'
+
 export default function Home() {
     return (
-      <a className="font-bold">halloo</a>
+     <a href="">comming soon</a>
     )
   }

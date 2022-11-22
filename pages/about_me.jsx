@@ -53,86 +53,81 @@ export default function about_me() {
         <h2 className="flex text-4xl justify-center py-2"> 👨🏻‍💻 &nbsp;A Little Bit About Me And My Interests</h2>
  
             <div className="rounded-md bg-[#161b22] p-5">
-                <p></p>
-                <div className={styles.infotext}>
-                    <p></p>
-                        <br></br>
-                        <div><span className={styles.pl_ent}>name</span>: <span className={styles.pl_s}>Luca Naujoks</span></div>
-                        <div><span className={styles.pl_ent}>current_job</span>: <span className={styles.pl_s}>Specialist for system integration</span></div>
-                        <p></p>
-                        <span className={styles.pl_ent}>company</span>: <span className={styles.pl_s}>Thinformatics</span>
-                        <p></p>
-                        <div><span className={styles.pl_ent}>fields_of_interests</span>:</div>
-                        <div><span className={styles.pl_s}>[</span></div>
-                        <div><span className={styles.pl_s}><span className={styles.pl_pds1}> "</span>Web Development<span className={styles.pl_pds}>"</span></span><span className={styles.pl_s}>,</span></div>
-                        <div><span className={styles.pl_s}><span className={styles.pl_pds1}> "</span>Data Science<span className={styles.pl_pds}>"</span></span><span className={styles.pl_s}>,</span></div>
-                        <div><span className={styles.pl_s}><span className={styles.pl_pds1}> "</span>Machine Learning<span className={styles.pl_pds}>"</span></span><span className={styles.pl_s}>,</span></div>
-                        <div><span className={styles.pl_s}><span className={styles.pl_pds1}> "</span>Game Development<span className={styles.pl_pds}>"</span></span><span className={styles.pl_s}>,</span></div>
-                        <div><span className={styles.pl_s}>]</span></div>
-                        <div><span className={styles.pl_ent}>technical_background</span>:</div>
-                        <div><span className={styles.pl_s}>[</span></div>
-                        <div> <span className={styles.pl_s}><span className={styles.pl_pds1}>"</span>IT system electronics technician<span className={styles.pl_pds}>"</span></span></div>
-                        <div><span className={styles.pl_s}>]</span></div>
+                        <div><span className="text-green-400 font-mono">name</span>: <span className="text-sky-400 font-mono">Luca Naujoks</span></div>
+                        <div><span className="text-green-400 font-mono">current_job</span>: <span className="text-sky-400 font-mono">Specialist for system integration</span></div>
+                        <span className="text-green-400 font-mono">company</span>: <span className="text-sky-400 font-mono">Thinformatics</span>
+
+                        <div className="mt-4"><span className="text-green-400 font-mono">fields_of_interests</span>:</div>
+                        <div><span className="text-sky-400 font-mono">[</span></div>
+                        <div><span className="text-sky-400 font-mono"><span className="text-white font-mono pl-5"> "</span>Web Development<span className="text-white font-mono">"</span></span><span className="text-sky-400 font-mono">,</span></div>
+                        <div><span className="text-sky-400 font-mono"><span className="text-white font-mono pl-5"> "</span>Data Science<span className="text-white font-mono">"</span></span><span className="text-sky-400 font-mono">,</span></div>
+                        <div><span className="text-sky-400 font-mono"><span className="text-white font-mono pl-5"> "</span>Machine Learning<span className="text-white font-mono">"</span></span><span className="text-sky-400 font-mono">,</span></div>
+                        <div><span className="text-sky-400 font-mono"><span className="text-white font-mono pl-5"> "</span>Game Development<span className="text-white font-mono">"</span></span><span className="text-sky-400 font-mono">,</span></div>
+                        <div><span className="text-sky-400 font-mono">]</span></div>
+                        <div  className="mt-4"><span className="text-green-400 font-mono">technical_background</span>:</div>
+                        <div><span className="text-sky-400 font-mono">[</span></div>
+                        <div> <span className="text-sky-400 font-mono"><span className="text-white font-mono pl-5">"</span>IT system electronics technician<span className="text-white font-mono">"</span></span></div>
+                        <div><span className="text-sky-400 font-mono">]</span></div>
                         <div></div>
-                        <div><span className={styles.pl_ent}>currently_learning</span>: <span className={styles.pl_s}>["Docker, Angular"]</span></div>
-                        <div><span className={styles.pl_ent}>2022 Goals</span>: <span className={styles.pl_s}>["Learn Angular and progress in Docker"]</span></div>
-                        <div><span className={styles.pl_ent}>hobbies</span>: <span className={styles.pl_s}>["Gaming", "Programming", "Firefighter", "Diving", "play with hardware"]</span></div>
-                </div>
+                        <div className="mt-4"><span className="text-green-400 font-mono">currently_learning</span>: <span className="text-sky-400 font-mono">["Docker, Angular"]</span></div>
+                        <div><span className="text-green-400 font-mono">2022 Goals</span>: <span className="text-sky-400 font-mono">["Learn Angular and progress in Docker"]</span></div>
+                        <div><span className="text-green-400 font-mono">hobbies</span>: <span className="text-sky-400 font-mono">["Gaming", "Programming", "Firefighter", "Diving", "play with hardware"]</span></div>
             </div>
 
             <hr/>
 
             <h2 className="flex text-4xl justify-center py-2"> 🚀 &nbsp;Some Tools / Languages I Use&nbsp; 🚀</h2>
 
+              <div className="flex justify-start grid-cols-3">
                 <img src="/assets/about_me/vscode.svg" alt="vscode" width="45" height="45"/>
                 <img src="/assets/about_me/PyCharm.svg" alt="PyCharm" width="45" height="45"/>
                 <img src="/assets/about_me/IntelliJ.svg" alt="IntelliJ" width="45" height="45"/>
-              
-              
+              </div>
+
+              <div className="flex justify-start grid-cols-4">
                 <img src="/assets/about_me/docker.svg" alt="docker" width="45" height="45"/>
                 <img src="/assets/about_me/linux.svg" alt="linux" width="45" height="45"/>
                 <img src="/assets/about_me/Windows.png" alt="Windows" width="45" height="45"/>
                 <img src="/assets/about_me/Mac.png" alt="Mac OS/IOS" width="45"height="45"/>
+              </div>
 
-
+              <div className="flex justify-start grid-cols-5">
                 <img src="/assets/about_me/java.png" alt="java" width="45" height="45" />
                 <img src="/assets/about_me/python.svg" alt="python" width="45" height="45" />
                 <img src="/assets/about_me/javascript.svg" alt="javascript" width="45" height="45" />
                 <img src="/assets/about_me/html5.svg" alt="html" width="45" height="45"/>
                 <img src="/assets/about_me/css3.svg" alt="css3" width="45" height="45" />
+              </div>
 
-              
+              <div className="flex justify-start grid-cols-2 mb-5">
                 <ing src="/assets/about_me/git.svg" alt="git" width="45" height="45"/>
                 <img src="/assets/about_me/mysql.svg" alt="mysql" width="45" height="45" />
+              </div>
+
             <hr/>
 
             <h2 className="flex text-4xl justify-center py-2">&lt;../&gt; Discord / Bots / Programming &lt;\..&gt;</h2>
  
             <div className="rounded-md bg-[#161b22] p-5">
-                <p></p>
                 <div className={styles.infotext}>
-                    <p></p>
-                        <br></br>
-                        <div><span className={styles.pl_ent}>name</span>: <span className={styles.pl_s}>Bobby Bot / Bobby69</span></div>
-                        <div><span className={styles.pl_ent}>current_job</span>: <span className={styles.pl_s}>Music Player, Croupier, Messaging Bot</span></div>
-                        <p></p>
-                        <span className={styles.pl_ent}>company</span>: <span className={styles.pl_s}>Bobby<sup>tm</sup></span>
-                        <p></p>
-                        <div><span className={styles.pl_ent}>fields_of_interests</span>:</div>
-                        <div><span className={styles.pl_s}>[</span></div>
-                        <div><span className={styles.pl_s}><span className={styles.pl_pds1}> "</span>Music<span className={styles.pl_pds}>"</span></span><span className={styles.pl_s}>,</span></div>
-                        <div><span className={styles.pl_s}><span className={styles.pl_pds1}> "</span>Data Science<span className={styles.pl_pds}>"</span></span><span className={styles.pl_s}>,</span></div>
-                        <div><span className={styles.pl_s}><span className={styles.pl_pds1}> "</span>Pictures<span className={styles.pl_pds}>"</span></span><span className={styles.pl_s}>,</span></div>
-                        <div><span className={styles.pl_s}><span className={styles.pl_pds1}> "</span>Anime<span className={styles.pl_pds}>"</span></span><span className={styles.pl_s}>,</span></div>
-                        <div><span className={styles.pl_s}>]</span></div>
-                        <div><span className={styles.pl_ent}>software</span>:</div>
-                        <div><span className={styles.pl_s}>[</span></div>
-                        <div> <span className={styles.pl_s}><span className={styles.pl_pds1}>"</span>Python<span className={styles.pl_pds}>"</span></span></div>
-                        <div><span className={styles.pl_s}>]</span></div>
+                        <div><span className="text-green-400 font-mono">name</span>: <span className="text-sky-400 font-mono">Bobby Bot / Bobby69</span></div>
+                        <div><span className="text-green-400 font-mono">current_job</span>: <span className="text-sky-400 font-mono">Music Player, Croupier, Messaging Bot</span></div>
+                        <span className="text-green-400 font-mono">company</span>: <span className="text-sky-400 font-mono">Bobby<sup>tm</sup></span>
+                        <div className="mt-4"><span className="text-green-400 font-mono">fields_of_interests</span>:</div>
+                        <div><span className="text-sky-400 font-mono">[</span></div>
+                        <div><span className="text-sky-400 font-mono"><span className="text-white font-mono pl-5"> "</span>Music<span className="text-white font-mono">"</span></span><span className="text-sky-400 font-mono">,</span></div>
+                        <div><span className="text-sky-400 font-mono"><span className="text-white font-mono pl-5"> "</span>Data Science<span className="text-white font-mono">"</span></span><span className="text-sky-400 font-mono">,</span></div>
+                        <div><span className="text-sky-400 font-mono"><span className="text-white font-mono pl-5"> "</span>Pictures<span className="text-white font-mono">"</span></span><span className="text-sky-400 font-mono">,</span></div>
+                        <div><span className="text-sky-400 font-mono"><span className="text-white font-mono pl-5"> "</span>Anime<span className="text-white font-mono">"</span></span><span className="text-sky-400 font-mono">,</span></div>
+                        <div><span className="text-sky-400 font-mono">]</span></div>
+                        <div className="mt-4"><span className="text-green-400 font-mono">software</span>:</div>
+                        <div><span className="text-sky-400 font-mono">[</span></div>
+                        <div> <span className="text-sky-400 font-mono"><span className="text-white font-mono pl-5">"</span>Python<span className="text-white font-mono">"</span></span></div>
+                        <div><span className="text-sky-400 font-mono">]</span></div>
                         <div></div>
-                        <div><span className={styles.pl_ent}>currently_learning</span>: <span className={styles.pl_s}>["Text with Humans"]</span></div>
-                        <div><span className={styles.pl_ent}>hobbies</span>: <span className={styles.pl_s}>["Watching Obi-Wan on Disney+", "Play Music"]</span></div>
-                        <div><span className={styles.pl_ent}>Link</span>: <span className={styles.pl_s}>You can Get my Bot</span><a href="https://discord.com/oauth2/authorize?client_id=864513968935927809&permissions=8&scope=bot" target="blank" className={styles.pl_s}> here</a></div>
+                        <div className="mt-4"><span className="text-green-400 font-mono">currently_learning</span>: <span className="text-sky-400 font-mono">["Text with Humans"]</span></div>
+                        <div><span className="text-green-400 font-mono">hobbies</span>: <span className="text-sky-400 font-mono">["Watching Obi-Wan on Disney+", "Play Music"]</span></div>
+                        <div><span className="text-green-400 font-mono">Link</span>: <span className="text-sky-400 font-mono">You can Get my Bot</span><a href="https://discord.com/oauth2/authorize?client_id=864513968935927809&permissions=8&scope=bot" target="blank" className="text-sky-400 font-mono"> here</a></div>
                 </div>
             </div>
         </main>
