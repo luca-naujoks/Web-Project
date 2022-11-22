@@ -6,14 +6,14 @@ Konkreter beinhaltet das Szenario die Aufgabe ein Netzwerk zu konzipieren, aufzu
 link1: /nooble/LF3/ipv4.html
 title1: Ipv4 Rechner
 
-link2: https://github.com/Filipza/LF3
+link2: https://github.com/luca-naujoks/Itech-IT2x
 title2: GitHub Repository
 
-link3: http://itechprofis.ro
-title3: OpenWrt Router
+link3: 
+title3: 
 
-link4: http://itechprofis.cloud
-title4: Nextcloud
+link4: 
+title4: 
 
 image: "/assets/Netzwerksizze.png"
 ---

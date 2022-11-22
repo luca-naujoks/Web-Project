@@ -12,10 +12,7 @@ export default function Post({ postData }) {
       </Head>
 
       <div className="flex justify-between transition duration-600 ml-9 px-5 items-center">
-        <div className="mt-3 grid grid-cols-2">
-          <Link href="/">
-            <img src="../assets/Navigation/Home.png" alt="Home" className="w-10 hover:scale-125 transition duration-600 cursor-pointer"/>
-          </Link>
+        <div className="mt-3">
           <Link href="/nooble/">
             <img src="../assets/Navigation/back.png" alt="Back" className="w-10 hover:scale-125 transition duration-600 cursor-pointer" />
           </Link>

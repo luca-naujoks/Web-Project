@@ -28,7 +28,7 @@ export default function about_me() {
       
           <div>
               <h1 className="flex text-4xl justify-center py-2">💬 My Social Media 💬</h1>
-        <hr/>
+        <hr className="border-neutral-900 border-1"/>
         <div className="flex justify-center">
             <a href="https://discord.com/users/528982743623925781" className="w-40" target="_blank">
               <img  src="/assets/about_me/Discord_Logo.svg"/>
@@ -43,15 +43,15 @@ export default function about_me() {
         </div>
 
         <p className="flex justify-center mt-5">
-            <Image src="/assets/about_me/sinon.gif" alt="Sinon" width={500} height={280}/>
+            <Image src="/assets/about_me/sinon.gif" alt="Sinon" width={500} height={280} className="rounded-md mb-4"/>
           </p>
         
-        <hr/>
+        <hr className="border-neutral-900 border-1"/>
 
 
-        <h2 className="flex text-4xl justify-center py-2"> 👨🏻‍💻 &nbsp;A Little Bit About Me And My Interests</h2>
+        <h2 className="flex text-4xl justify-center py-4"> 👨🏻‍💻 &nbsp;A Little Bit About Me And My Interests</h2>
  
-            <div className="rounded-md bg-[#161b22] p-5">
+            <div className="rounded-md bg-[#161b22] p-5 mb-6">
                         <div><span className="text-green-400 font-mono">name</span>: <span className="text-sky-400 font-mono">Luca Naujoks</span></div>
                         <div><span className="text-green-400 font-mono">current_job</span>: <span className="text-sky-400 font-mono">Specialist for system integration</span></div>
                         <span className="text-green-400 font-mono">company</span>: <span className="text-sky-400 font-mono">Thinformatics</span>
@@ -73,7 +73,7 @@ export default function about_me() {
                         <div><span className="text-green-400 font-mono">hobbies</span>: <span className="text-sky-400 font-mono">["Gaming", "Programming", "Firefighter", "Diving", "play with hardware"]</span></div>
             </div>
 
-            <hr/>
+            <hr className="border-neutral-900 border-1"/>
 
             <h2 className="flex text-4xl justify-center py-2"> 🚀 &nbsp;Some Tools / Languages I Use&nbsp; 🚀</h2>
 
@@ -83,14 +83,14 @@ export default function about_me() {
                 <img src="/assets/about_me/IntelliJ.svg" alt="IntelliJ" width="45" height="45"/>
               </div>
 
-              <div className="flex justify-start grid-cols-4">
+              <div className="flex justify-start grid-cols-4 mt-3">
                 <img src="/assets/about_me/docker.svg" alt="docker" width="45" height="45"/>
                 <img src="/assets/about_me/linux.svg" alt="linux" width="45" height="45"/>
                 <img src="/assets/about_me/Windows.png" alt="Windows" width="45" height="45"/>
                 <img src="/assets/about_me/Mac.png" alt="Mac OS/IOS" width="45"height="45"/>
               </div>
 
-              <div className="flex justify-start grid-cols-5">
+              <div className="flex justify-start grid-cols-5 mt-3">
                 <img src="/assets/about_me/java.png" alt="java" width="45" height="45" />
                 <img src="/assets/about_me/python.svg" alt="python" width="45" height="45" />
                 <img src="/assets/about_me/javascript.svg" alt="javascript" width="45" height="45" />
@@ -98,17 +98,17 @@ export default function about_me() {
                 <img src="/assets/about_me/css3.svg" alt="css3" width="45" height="45" />
               </div>
 
-              <div className="flex justify-start grid-cols-2 mb-5">
+              <div className="flex justify-start grid-cols-2 mb-5 mt-3">
                 <ing src="/assets/about_me/git.svg" alt="git" width="45" height="45"/>
                 <img src="/assets/about_me/mysql.svg" alt="mysql" width="45" height="45" />
               </div>
 
-            <hr/>
+            <hr className="border-neutral-900 border-1"/>
 
             <h2 className="flex text-4xl justify-center py-2">&lt;../&gt; Discord / Bots / Programming &lt;\..&gt;</h2>
- 
-            <div className="rounded-md bg-[#161b22] p-5">
-                <div className={styles.infotext}>
+
+            <div className="rounded-md bg-[#161b22] p-5 mt-5 transition-all duration-700 hover:scale-105 cursor-pointer">
+                <div className="transform-none">
                         <div><span className="text-green-400 font-mono">name</span>: <span className="text-sky-400 font-mono">Bobby Bot / Bobby69</span></div>
                         <div><span className="text-green-400 font-mono">current_job</span>: <span className="text-sky-400 font-mono">Music Player, Croupier, Messaging Bot</span></div>
                         <span className="text-green-400 font-mono">company</span>: <span className="text-sky-400 font-mono">Bobby<sup>tm</sup></span>
