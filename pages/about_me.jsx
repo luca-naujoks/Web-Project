@@ -1,6 +1,5 @@
 import Head from "next/head"
 import Image from "next/image"
-import styles from "../styles/about_me.module.css"
 import Link from "next/link"
 
 
