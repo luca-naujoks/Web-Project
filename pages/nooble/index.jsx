@@ -28,28 +28,28 @@ export default function Home() {
           </button>
         </div>
       </div>
-      <hr className="m-3"/>
+      <hr className="m-3 border-neutral-900 border-1"/>
 
 
 
-      <div className="flex">
+      <div className="flex xs:flex-col lg:flex-row">
 
-<Link href="/nooble" className="bg-[#161b22] rounded-md w-2/6 m-4 transition-all duration-600 p-10 hover:transform-none">
+<Link href="/nooble" className="bg-[#161b22] rounded-md xs:w-auto lg:w-2/6 m-4 transition-all duration-600 p-10 hover:transform-none">
   
-   <div className=""><h2 className="text-xl underline">LF1</h2></div>
+   <div className=""><h2 className="text-xl underline">LF1 Eigene rolle im Betrieb kennenlernen</h2></div>
    <div className="">
    </div>
 </Link>
 
  
-<Link href="/nooble" className="bg-[#161b22] rounded-md w-2/6 m-4 transition-all duration-600 p-10 hover:transform-none">
-   <div className=""><h2 className="text-xl underline">LF2</h2></div>
+<Link href="/nooble" className="bg-[#161b22] rounded-md xs:w-auto lg:w-2/6 m-4 transition-all duration-600 p-10 hover:transform-none">
+   <div className=""><h2 className="text-xl underline">LF2 Arbeitsplätze richtig Ausstatten</h2></div>
    <div className="">  
    </div>
 </Link>
 
-<Link href="/nooble/LF3"  className="bg-[#161b22] rounded-md w-2/6 m-4 transition-all duration-600 p-10 hover:scale-105">
-  <div className=""><h2 className="text-xl underline">LF3 Networking</h2></div> 
+<Link href="/nooble/LF3"  className="bg-[#161b22] rounded-md xs:w-auto lg:w-2/6 m-4 transition-all duration-600 p-10 hover:scale-105">
+  <div className=""><h2 className="text-xl underline">LF3 Netzwerktechnik</h2></div> 
    <div className="hover:transform-none">
          <div><span className="text-green-400 font-mono">berufsschule</span>: <span className="text-sky-400 font-mono">Itech BS 14</span></div>
          <br></br>
@@ -79,18 +79,18 @@ export default function Home() {
 
 </div>
 
-    <div className="flex">
+    <div className="flex xs:flex-col lg:flex-row">
 
 
-    <Link href="/nooble" className="bg-[#161b22] rounded-md w-2/6 m-4 transition-all duration-600 p-10 hover:transform-none">
-       <div className=""><h2 className="text-xl underline">LF4</h2></div> 
+    <Link href="/nooble" className="bg-[#161b22] rounded-md xs:w-auto lg:w-2/6 m-4 transition-all duration-600 p-10 hover:transform-none">
+       <div className=""><h2 className="text-xl underline">LF4 Schutzbedarfsanalyse</h2></div> 
         <div className="">
 
         </div>
     </Link>  
 
       
-    <Link href="/nooble/LF5" className="bg-[#161b22] rounded-md w-2/6 m-4 transition-all duration-600 p-10 hover:scale-105">
+    <Link href="/nooble/LF5" className="bg-[#161b22] rounded-md xs:w-auto lg:w-2/6 m-4 transition-all duration-600 p-10 hover:scale-105">
     <div className=""><h2 className="text-xl underline">LF5 Datenbanken</h2></div> 
    <div className="hover:transform-none">
          <div><span className="text-green-400 font-mono">berufsschule</span>: <span className="text-sky-400 font-mono">Itech BS 14</span></div>
@@ -117,8 +117,8 @@ export default function Home() {
    </div>
     </Link>
 
-    <Link href="/nooble" className="bg-[#161b22] rounded-md w-2/6 m-4 transition-all duration-600 p-10 hover:transform-none">
-        <div className=""><h2 className="text-xl underline">LF6</h2></div>
+    <Link href="/nooble" className="bg-[#161b22] rounded-md xs:w-auto lg:w-2/6 m-4 transition-all duration-600 p-10 hover:transform-none">
+        <div className=""><h2 className="text-xl underline">LF6 Serviceanfragen bearbeiten</h2></div>
         <div className="">
 
         </div>
@@ -127,10 +127,10 @@ export default function Home() {
     </div>
 
 
-    <div className="flex ">
+    <div className="flex xs:flex-col lg:flex-row">
 
-    <Link href="/nooble/LF7" className="bg-[#161b22] rounded-md w-2/6 m-4 transition-all duration-600 p-10 hover:scale-105 ">
-    <div className=""><h2 className="text-xl underline">LF7 Cyber Physische Systeme</h2></div> 
+    <Link href="/nooble/LF7" className="bg-[#161b22] rounded-md xs:w-auto lg:w-2/6 m-4 transition-all duration-600 p-10 hover:scale-105 ">
+    <div className=""><h2 className="text-xl underline">LF7 Cyber-physische Systeme</h2></div> 
     <div className="hover:transform-none">
     <span className="text-green-400 font-mono">date</span>: <span className="text-sky-400 font-mono">---</span>
         <br></br>
@@ -155,15 +155,15 @@ export default function Home() {
     </Link>
 
       
-    <Link href="/nooble" className="bg-[#161b22] rounded-md w-2/6 m-4 transition-all duration-600 p-10 hover:transform-none">
+    <Link href="/nooble" className="bg-[#161b22] rounded-md xs:w-auto lg:w-2/6 m-4 transition-all duration-600 p-10 hover:transform-none">
        
-        <div className=""><h2 className="text-xl underline">LF8</h2></div>
+        <div className=""><h2 className="text-xl underline">LF8 System übergreifende daten bereitstellen</h2></div>
         <div className="">
        </div>
     </Link>
 
-    <Link href="/nooble" className="bg-[#161b22] rounded-md w-2/6 m-4 transition-all duration-600 p-10 hover:transform-none">
-        <div className=""><h2 className="text-xl underline">LF9</h2></div>
+    <Link href="/nooble" className="bg-[#161b22] rounded-md xs:w-auto lg:w-2/6 m-4 transition-all duration-600 p-10 hover:transform-none">
+        <div className=""><h2 className="text-xl underline">LF9 netzwerke & Dienste bereitstellen</h2></div>
         <div className="">
 
         </div>
@@ -172,28 +172,28 @@ export default function Home() {
     </div>
 
     <h2 className="text-red-900 text-4xl p-2 text-center">Ausbildungs Spezifisch</h2>
-    <hr/>
+    <hr className="m-3 border-red-900 border-1"/>
 
 
-    <div className="flex">
+    <div className="flex xs:flex-col lg:flex-row">
     
-    <Link href="/nooble" className="bg-[#161b22] rounded-md w-2/6 m-4 transition-all duration-600 p-10 hover:transform-none">
-       <div className=""><h2 className="text-xl underline">LF10</h2></div> 
+    <Link href="/nooble" className="bg-[#161b22] rounded-md xs:w-auto lg:w-2/6 m-4 transition-all duration-600 p-10 hover:transform-none">
+       <div className=""><h2 className="text-xl underline">LF10 Serverdienste & Adminaufgaben Automatisieren</h2></div> 
         <div className="">
 
         </div>
     </Link>
 
       
-    <Link href="/nooble" className="bg-[#161b22] rounded-md w-2/6 m-4 transition-all duration-600 p-10 hover:transform-none">
-        <div className=""><h2 className="text-xl underline">LF11</h2></div>
+    <Link href="/nooble" className="bg-[#161b22] rounded-md xs:w-auto lg:w-2/6 m-4 transition-all duration-600 p-10 hover:transform-none">
+        <div className=""><h2 className="text-xl underline">LF11 Betrieb & Sicherheit vernetzter Systeme</h2></div>
         <div className="">
 
         </div>
     </Link>
       
-    <Link href="/nooble" className="bg-[#161b22] rounded-md w-2/6 m-4 transition-all duration-600 p-10 hover:transform-none">
-        <div className=""><h2 className="text-xl underline">LF12</h2></div>
+    <Link href="/nooble" className="bg-[#161b22] rounded-md xs:w-auto lg:w-2/6 m-4 transition-all duration-600 p-10 hover:transform-none">
+        <div className=""><h2 className="text-xl underline">LF12 Kundenspezifische Systemintegration</h2></div>
         <div className="">
 
         </div>

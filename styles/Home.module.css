@@ -1,11 +1,9 @@
-/*Desktop Screen*/
-@media only screen and (min-width:701px) {
-    .video {
-      z-index: 0;
-      width: 90%;
-      height: 90%;
-      position: absolute;
-      clip-path: url(#overlay);
-      top: -5%;
-  }
+
+.video {
+  z-index: 0;
+  width: 90%;
+  height: 90%;
+  position: absolute;
+  clip-path: url(#overlay);
+  top: -5%;
 }

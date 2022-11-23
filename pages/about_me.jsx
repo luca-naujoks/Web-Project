@@ -15,10 +15,10 @@ export default function about_me() {
       <main className="bg-black px-[5%]">
       <div className="flex justify-between p-2.5">
           <Link href="/">
-            <img  src="../assets/Navigation/Home.png" alt="Home"  className="h-10 hover:scale-125 transition duration-700 ease-in-out"/>
+            <img  src="../assets/Navigation/Home.png" alt="Home"  className="xs:h-7 md:h-10 hover:scale-125 transition duration-700 ease-in-out"/>
           </Link>
             <button className="bg-[transparent] border-none">
-              <img src="../assets/Navigation/login.png" alt="Login" className="h-10 hover:scale-125 transition duration-700 ease-in-out"/>
+              <img src="../assets/Navigation/login.png" alt="Login" className="xs:h-7 md:h-10 hover:scale-125 transition duration-700 ease-in-out"/>
             </button>
       </div>
 
@@ -27,7 +27,7 @@ export default function about_me() {
           </span>
       
           <div>
-              <h1 className="flex text-4xl justify-center py-2">💬 My Social Media 💬</h1>
+              <h1 className="flex xs:text-2xl md:text-4xl justify-center py-2">💬 My Social Media 💬</h1>
         <hr className="border-neutral-900 border-1"/>
         <div className="flex justify-center">
             <a href="https://discord.com/users/528982743623925781" className="w-40" target="_blank">
@@ -49,7 +49,7 @@ export default function about_me() {
         <hr className="border-neutral-900 border-1"/>
 
 
-        <h2 className="flex text-4xl justify-center py-4"> 👨🏻‍💻 &nbsp;A Little Bit About Me And My Interests</h2>
+        <h2 className="flex xs:text-lg md:text-4xl justify-center py-4"> 👨🏻‍💻 &nbsp;A Little Bit About Me &nbsp; 👨🏻‍💻</h2>
  
             <div className="rounded-md bg-[#161b22] p-5 mb-6">
                         <div><span className="text-green-400 font-mono">name</span>: <span className="text-sky-400 font-mono">Luca Naujoks</span></div>
@@ -75,7 +75,7 @@ export default function about_me() {
 
             <hr className="border-neutral-900 border-1"/>
 
-            <h2 className="flex text-4xl justify-center py-2"> 🚀 &nbsp;Some Tools / Languages I Use&nbsp; 🚀</h2>
+            <h2 className="flex xs:text-lg md:text-4xl justify-center py-2"> 🚀 &nbsp;Some Tools / Languages I Use&nbsp; 🚀</h2>
 
               <div className="flex justify-start grid-cols-3">
                 <img src="/assets/about_me/vscode.svg" alt="vscode" width="45" height="45"/>
@@ -105,7 +105,7 @@ export default function about_me() {
 
             <hr className="border-neutral-900 border-1"/>
 
-            <h2 className="flex text-4xl justify-center py-2">&lt;../&gt; Discord / Bots / Programming &lt;\..&gt;</h2>
+            <h2 className="flex xs:text-md sm:text-lg md:text-4xl justify-center py-2">&lt;../&gt; Discord | Bots | Programming &lt;\..&gt;</h2>
 
             <div className="rounded-md bg-[#161b22] p-5 mt-5 transition-all duration-700 hover:scale-105 cursor-pointer">
                 <div className="transform-none">
