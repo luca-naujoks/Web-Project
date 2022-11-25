@@ -3,7 +3,14 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function about_me() {
-  const showlogin = () => document.getElementById("login_overlay").style.display = "block"
+  function changeoverlay() {
+    document.getElementById("signup").classList.remove("hidden");
+    document.getElementById("login").classList.add("hidden");
+  }
+  function changeoverlay1() {
+    document.getElementById("signup").classList.add("hidden");
+    document.getElementById("login").classList.remove("hidden");
+  }
 
 
   return (
@@ -33,7 +40,7 @@ export default function about_me() {
             className="xs:w-2/3 md:w-1/2"
           />
 
-          <Link href="" onClick={showlogin}>
+          <Link href="" onClick={changeoverlay}>
             <img
               src="../assets/Navigation/login.png"
               alt="Login"
@@ -45,18 +52,107 @@ export default function about_me() {
 
         <span className="block mx-auto w-1/2"></span>
 
-<div id="login_overlay" className="flex justify-center items-center hidden">
-      <div className=" flex justify-center border-white border-2 w-2/6 p-6 m-5 rounded-xl ">
-        <form action="/">
-          <p className="flex justify-center text-xl">Bobby Bank Login</p>
-          <div className="flex justify-center"> <button className="p-2">Login</button><button className="p-2">Sign Up</button></div>
-          <input type="text" id="user" name="user" placeholder="Username" className="p-1 m-2 rounded-md border-white border-2 bg-transparent"/><br />
-          <input type="password" id="passwd" name="password" placeholder="Password" className="p-1 m-2 rounded-md border-white border-2 bg-transparent" /><br />
-          <input type="checkbox" id="remember" name="remember" className="p-1 m-2"/> Remember Me?<br />
-          <button type="submit" className="hover:bg-green-500 duration-300 rounded-md p-2 m-2">Login</button>
-        </form>
+      <div id="login" className="flex justify-center items-center hidden">
+        <div className=" flex justify-center border-white border-2 w-2/6 p-6 m-5 rounded-xl ">
+          <div>
+            <div className="">
+              <p className="flex justify-center text-xl">Bobby Bank Login</p>
+              <button id="loginbtn" className="p-2 font-bold">
+                Login
+              </button>
+              <button id="signupbtn" className="p-2" onClick={changeoverlay}>
+                Sign Up
+              </button>
+            </div>
+            <div className="flex justify-center items-center"> </div>
+            <form>
+              <input
+                type="text"
+                id="user"
+                name="user"
+                placeholder="Username"
+                className="p-1 m-2 rounded-md border-white border-2 bg-transparent"
+              />
+              <br />
+              <input
+                type="password"
+                id="passwd"
+                name="password"
+                placeholder="Password"
+                className="p-1 m-2 rounded-md border-white border-2 bg-transparent"
+              />
+              <br />
+              <input
+                type="checkbox"
+                id="remember"
+                name="remember"
+                className="p-1 m-2"
+              />{" "}
+              Remember Me?
+              <br />
+              <button className="rounded-md hover:bg-green-500 duration-300 p-2 m-2">
+                Login
+              </button>
+            </form>
+          </div>
         </div>
       </div>
+
+      <div id="signup" className="flex justify-center items-center hidden">
+        <div className=" flex justify-center border-white border-2 w-2/6 p-6 m-5 rounded-xl ">
+          <div>
+            <div className="">
+              <p className="flex justify-center text-xl">Bobby Bank Sign Up</p>
+              <button id="loginbtn" className="p-2 " onClick={changeoverlay1}>
+                Login
+              </button>
+              <button id="signupbtn" className="p-2 font-bold">
+                Sign Up
+              </button>
+            </div>
+            <div className="flex justify-center items-center"> </div>
+            <form>
+              <input
+                type="text"
+                id="user"
+                name="user"
+                placeholder="Username"
+                className="p-1 m-2 rounded-md border-white border-2 bg-transparent"
+              />
+              <br />
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="E-Mail-Adress"
+                className="p-1 m-2 rounded-md border-white border-2 bg-transparent"
+              />
+              <br />
+              <input
+                type="password"
+                id="passwd"
+                name="password"
+                placeholder="Password"
+                className="p-1 m-2 rounded-md border-white border-2 bg-transparent"
+              />
+              <br />
+              <input
+                type="checkbox"
+                id="remember"
+                name="remember"
+                className="p-1 m-2"
+                required
+              />{" "}
+              Accept our User Guidelines
+              <br />
+              <button className="rounded-md hover:bg-green-500 duration-300 p-2 m-2">
+                Sign Up
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+
         <div>
           <h1 className="flex xs:text-2xl md:text-4xl justify-center py-2">
             💬 My Social Media 💬
