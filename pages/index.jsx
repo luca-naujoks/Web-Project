@@ -2,7 +2,22 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import Link from "next/link";
-import login_overlay from "../components/Login";
+
+function showsignup() {
+  document.getElementById("signup").classList.remove("hidden");
+  document.getElementById("login").classList.add("hidden");
+}
+function showlogin() {
+  document.getElementById("signup").classList.add("hidden");
+  document.getElementById("login").classList.remove("hidden");
+  document.getElementById("links").style.filter = "blur(4px)";
+}
+function close() {
+  document.getElementById("signup").classList.add("hidden");
+  document.getElementById("login").classList.add("hidden");
+  document.getElementById("links").classList.remove("blur-sm");
+}
+
 
 export default function Home() {
 
@@ -16,13 +31,14 @@ export default function Home() {
 
       <div className="flex justify-end">
         <div>
-          <button className="bg-[transparent] border-none">
+        <Link href="" onClick={showlogin}>
             <img
               src="../assets/Navigation/login.png"
               alt="Login"
-              className="h-10 relative hover:scale-125 transition duration-700 ease-in-out"
+              href=""
+              className="xs:h-5 md:h-10 hover:scale-125 transition duration-700 ease-in-out"
             />
-          </button>
+          </Link>
         </div>
       </div>
 
@@ -43,7 +59,7 @@ export default function Home() {
           <source src="/assets/background.mp4" type="video/mp4" />
         </video>
 
-        <div className="flex absolute justify-center items-center xs:flex-col md:flex-row xs:left-[52%] md:left-[51%] xl:left-1/2 top-3/4 -mr-1/2 -translate-x-1/2 -translate-y-1/2 transition-all duration-600">
+        <div id="links" className="flex absolute justify-center items-center xs:flex-col md:flex-row xs:left-[52%] md:left-[51%] xl:left-1/2 top-3/4 -mr-1/2 -translate-x-1/2 -translate-y-1/2 transition-all duration-600">
           <a
             href="/about_me"
             className="xs:w-60 xs:h-32 md:w-48 md:h-36 lg:w-80 xl:h-48 border  xs:m-2 xl:m-5 p-15 text-left no-underline border-white rounded-xl hover:scale-105 transition duration-700 ease-in-out hover:text-fuchsia-400 hover:border-fuchsia-400"

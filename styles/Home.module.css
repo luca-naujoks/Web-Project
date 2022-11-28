@@ -1,6 +1,6 @@
 
 .video {
-  z-index: 0;
+  z-index: -1;
   width: 90%;
   height: 90%;
   position: absolute;

@@ -3,11 +3,11 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function about_me() {
-  function changeoverlay() {
+  function showsignup() {
     document.getElementById("signup").classList.remove("hidden");
     document.getElementById("login").classList.add("hidden");
   }
-  function changeoverlay1() {
+  function showlogin() {
     document.getElementById("signup").classList.add("hidden");
     document.getElementById("login").classList.remove("hidden");
   }
@@ -40,7 +40,7 @@ export default function about_me() {
             className="xs:w-2/3 md:w-1/2"
           />
 
-          <Link href="" onClick={changeoverlay}>
+          <Link href="" onClick={showlogin}>
             <img
               src="../assets/Navigation/login.png"
               alt="Login"
@@ -60,7 +60,7 @@ export default function about_me() {
               <button id="loginbtn" className="p-2 font-bold">
                 Login
               </button>
-              <button id="signupbtn" className="p-2" onClick={changeoverlay}>
+              <button id="signupbtn" className="p-2" onClick={showsignup}>
                 Sign Up
               </button>
             </div>
@@ -103,7 +103,7 @@ export default function about_me() {
           <div>
             <div className="">
               <p className="flex justify-center text-xl">Bobby Bank Sign Up</p>
-              <button id="loginbtn" className="p-2 " onClick={changeoverlay1}>
+              <button id="loginbtn" className="p-2 " onClick={showlogin}>
                 Login
               </button>
               <button id="signupbtn" className="p-2 font-bold">
