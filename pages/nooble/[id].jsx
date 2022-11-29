@@ -11,62 +11,55 @@ export default function Post({ postData }) {
         <link rel="icon" href="/Axolotl_Logo.png" />
       </Head>
 
-      <div className="flex justify-between transition duration-600  px-5 items-center">
-        <div className="mt-3">
-          <Link href="/nooble/">
-            <img
-              src="../assets/Navigation/back.png"
-              alt="Back"
-              className="w-10 hover:scale-125 transition duration-600 cursor-pointer"
-            />
-          </Link>
+      <div className="">
+        <div className="flex justify-between transition duration-600  px-5 items-center">
+          <div className="mt-3">
+          </div>
+
+          <h1 className="text-5xl"> Nooble </h1>
+          
+          <div className="mt-3">
+            <Link href="/nooble">
+              <text className="md:text-2xl hover:text-red-500">&#x2718;</text>
+            </Link>
+          </div>
         </div>
-        <h1 className="text-5xl"> Nooble </h1>
-        <div className="mt-3">
-          <button href="/login">
-            <img
-              src="../assets/Navigation/login.png"
-              alt="Login"
-              className="w-10 bg-transparent border-none hover:scale-125 transition duration-600 cursor-pointer"
-            />
-          </button>
-        </div>
+
+        <main className="">
+          <div className="py-5 bg-[#161b22] rounded-md ml-[2.5%] m-2 xs:w-auto xl:w-[50%] text-3xl p-10">
+            <h2>{postData.title}</h2>
+          </div>
+
+          <div className="float-left bg-[#161b22] xs:w-auto xl:w-[50%] rounded-md p-10 text-xl text-gray-400 mt-2 mb-1 mr-2 ml-[2.5%]">
+            <h3 className="underline">Übersicht:</h3>
+            {postData.info}
+          </div>
+
+          <div className="float-left bg-[#161b22]  xl:w-[50%] rounded-md p-10 text-xl text-white mt-2 mb-1 mr-2 ml-[2.5%]">
+            <h3 className="underline">Weiterführende Links zum Lernfeld:</h3>
+            <a href={postData.link1} target="_blank">
+              {postData.title1}
+            </a>
+            <p>
+              <a href={postData.link2} target="_blank">
+                {postData.title2}
+              </a>
+            </p>
+            <p>
+              <a href={postData.link3} target="_blank">
+                {postData.title3}
+              </a>
+            </p>
+            <p>
+              <a href={postData.link4} target="_blank">
+                {postData.title4}
+              </a>
+            </p>
+          </div>
+
+          <Image width={650} height={650} src={postData.image} className="" />
+        </main>
       </div>
-
-      <main className="">
-        <div className="py-5 bg-[#161b22] rounded-md ml-[2.5%] m-2 xs:w-auto xl:w-[50%] text-3xl p-10">
-          <h2>{postData.title}</h2>
-        </div>
-
-        <div className="float-left bg-[#161b22] xs:w-auto xl:w-[50%] rounded-md p-10 text-xl text-gray-400 mt-2 mb-1 mr-2 ml-[2.5%]">
-          <h3 className="underline">Übersicht:</h3>
-          {postData.info}
-        </div>
-
-        <div className="float-left bg-[#161b22]  xl:w-[50%] rounded-md p-10 text-xl text-white mt-2 mb-1 mr-2 ml-[2.5%]">
-          <h3 className="underline">Weiterführende Links zum Lernfeld:</h3>
-          <a href={postData.link1} target="_blank">
-            {postData.title1}
-          </a>
-          <p>
-            <a href={postData.link2} target="_blank">
-              {postData.title2}
-            </a>
-          </p>
-          <p>
-            <a href={postData.link3} target="_blank">
-              {postData.title3}
-            </a>
-          </p>
-          <p>
-            <a href={postData.link4} target="_blank">
-              {postData.title4}
-            </a>
-          </p>
-        </div>
-
-        <Image width={650} height={650} src={postData.image} className="" />
-      </main>
     </div>
   );
 }

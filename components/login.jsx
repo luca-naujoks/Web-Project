@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 
 
-export default function login_overlay() {
+function login_overlay() {
 
   function showsignup() {
     document.getElementById("signup").classList.remove("hidden");
@@ -11,9 +11,14 @@ export default function login_overlay() {
   function showlogin() {
     document.getElementById("signup").classList.add("hidden");
     document.getElementById("login").classList.remove("hidden");
+    document.getElementById("links").style.filter = "blur(4px)";
+  }
+  function close() {
+    document.getElementById("signup").classList.add("hidden");
+    document.getElementById("login").classList.add("hidden");
+    document.getElementById("links").classList.remove("blur-sm");
   }
 
-  return (
     <div id="container">
       <div id="login" className="flex justify-center items-center hidden">
         <div className=" border-white border-2 w-2/6 m-5 rounded-xl">
@@ -127,5 +132,6 @@ export default function login_overlay() {
         </div>
       </div>
     </div>
-  );
 }
+
+export default login_overlay

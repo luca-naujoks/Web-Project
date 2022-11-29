@@ -2,6 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import Link from "next/link";
+import React from "react";
 
 function showsignup() {
   document.getElementById("signup").classList.remove("hidden");
@@ -10,17 +11,63 @@ function showsignup() {
 function showlogin() {
   document.getElementById("signup").classList.add("hidden");
   document.getElementById("login").classList.remove("hidden");
+  document.getElementById("me", "nooble", "todo").removeAttribute("href");
+  document.getElementById("nooble").removeAttribute("href");
+  document.getElementById("todo").removeAttribute("href");
+  document
+    .getElementById("me")
+    .classList.remove(
+      "hover:scale-105",
+      "hover:text-fuchsia-400",
+      "hover:border-fuchsia-400"
+    );
+  document
+    .getElementById("nooble")
+    .classList.remove(
+      "hover:scale-105",
+      "hover:text-fuchsia-400",
+      "hover:border-fuchsia-400"
+    );
+  document
+    .getElementById("todo")
+    .classList.remove(
+      "hover:scale-105",
+      "hover:text-fuchsia-400",
+      "hover:border-fuchsia-400"
+    );
   document.getElementById("links").style.filter = "blur(4px)";
 }
 function close() {
   document.getElementById("signup").classList.add("hidden");
   document.getElementById("login").classList.add("hidden");
-  document.getElementById("links").classList.remove("blur-sm");
+  document.getElementById("links").style.filter = "blur(0px)";
+  document.getElementById("me").href = "/about_me";
+  document.getElementById("nooble").href = "/nooble";
+  document.getElementById("todo").href = "/to-do";
+  document
+    .getElementById("me")
+    .classList.add(
+      "hover:scale-105",
+      "hover:text-fuchsia-400",
+      "hover:border-fuchsia-400"
+    );
+  document
+    .getElementById("nooble")
+    .classList.add(
+      "hover:scale-105",
+      "hover:text-fuchsia-400",
+      "hover:border-fuchsia-400"
+    );
+  document
+    .getElementById("todo")
+    .classList.add(
+      "hover:scale-105",
+      "hover:text-fuchsia-400",
+      "hover:border-fuchsia-400"
+    );
 }
 
-
 export default function Home() {
-
   return (
     <div className="m-5">
       <Head>
@@ -31,7 +78,7 @@ export default function Home() {
 
       <div className="flex justify-end">
         <div>
-        <Link href="" onClick={showlogin}>
+          <Link href="" onClick={showlogin}>
             <img
               src="../assets/Navigation/login.png"
               alt="Login"
@@ -39,6 +86,144 @@ export default function Home() {
               className="xs:h-5 md:h-10 hover:scale-125 transition duration-700 ease-in-out"
             />
           </Link>
+        </div>
+      </div>
+
+      <div id="login_container">
+        <div id="login" className="flex justify-center items-center hidden ">
+          <div className=" border-white border-2 w-2/6 m-5 rounded-xl backdrop-blur-sm mt-24">
+            <div>
+              <div className="flex justify-end items-end">
+                <button
+                  className="hover:text-red-500 duration-300 p-2"
+                  onClick={close}
+                >
+                  &#x2718;
+                </button>
+              </div>
+
+              <p className="flex justify-center text-xl">Bobby Bank Login</p>
+              <div className="flex justify-center">
+                <button
+                  id="loginbtn"
+                  className="p-2 font-bold"
+                  onClick={showlogin}
+                >
+                  Login
+                </button>
+                <button id="signupbtn" className="p-2" onClick={showsignup}>
+                  Sign Up
+                </button>
+              </div>
+
+              <div className="flex justify-center items-center">
+                <form>
+                  <input
+                    type="text"
+                    id="user"
+                    name="user"
+                    placeholder="Username"
+                    className="p-1 m-2 rounded-md border-white border-2 bg-transparent"
+                  />
+                  <br />
+                  <input
+                    type="password"
+                    id="passwd"
+                    name="password"
+                    placeholder="Password"
+                    className="p-1 m-2 rounded-md border-white border-2 bg-transparent"
+                  />
+                  <br />
+                  <input
+                    type="checkbox"
+                    id="remember"
+                    name="remember"
+                    className="p-1 m-2"
+                  />{" "}
+                  Remember Me?
+                  <br />
+                  <button
+                    className="rounded-md hover:bg-green-500 duration-300 p-2 m-2"
+                    onClick={close}
+                  >
+                    Login
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="signup" className="flex justify-center items-center hidden">
+          <div className=" border-white border-2 w-2/6 m-5 rounded-xl backdrop-blur-sm mt-12 ">
+            <div>
+              <div className="flex justify-end items-end">
+                <button
+                  className="hover:text-red-500 duration-300 p-2"
+                  onClick={close}
+                >
+                  &#x2718;
+                </button>
+              </div>
+
+              <p className="flex justify-center text-xl">Bobby Bank Sign Up</p>
+              <div className="flex justify-center">
+                <button id="loginbtn" className="p-2" onClick={showlogin}>
+                  Login
+                </button>
+                <button
+                  id="signupbtn"
+                  className="p-2 font-bold"
+                  onClick={showsignup}
+                >
+                  Sign Up
+                </button>
+              </div>
+
+              <div className="flex justify-center items-center">
+                <form>
+                  <input
+                    type="text"
+                    id="user"
+                    name="user"
+                    placeholder="Username"
+                    className="p-1 m-2 rounded-md border-white border-2 bg-transparent"
+                  />
+                  <br />
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="E-Mail-Adress"
+                    className="p-1 m-2 rounded-md border-white border-2 bg-transparent"
+                  />
+                  <br />
+                  <input
+                    type="password"
+                    id="passwd"
+                    name="password"
+                    placeholder="Password"
+                    className="p-1 m-2 rounded-md border-white border-2 bg-transparent"
+                  />
+                  <br />
+                  <input
+                    type="checkbox"
+                    id="remember"
+                    name="remember"
+                    className="p-1 m-2"
+                  />{" "}
+                  Accept our User Guidelines
+                  <br />
+                  <button
+                    className="rounded-md hover:bg-blue-500 duration-300 p-2 m-2"
+                    onClick={close}
+                  >
+                    Sign Up
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -55,12 +240,16 @@ export default function Home() {
           </clipPath>
         </svg>
 
-        <video autoPlay loop muted className={styles.video}>
+        <video id="video" autoPlay loop muted className={styles.video}>
           <source src="/assets/background.mp4" type="video/mp4" />
         </video>
 
-        <div id="links" className="flex absolute justify-center items-center xs:flex-col md:flex-row xs:left-[52%] md:left-[51%] xl:left-1/2 top-3/4 -mr-1/2 -translate-x-1/2 -translate-y-1/2 transition-all duration-600">
+        <div
+          id="links"
+          className="flex absolute justify-center items-center xs:flex-col md:flex-row xs:left-[52%] md:left-[51%] xl:left-1/2 top-3/4 -mr-1/2 -translate-x-1/2 -translate-y-1/2 transition-all duration-600"
+        >
           <a
+            id="me"
             href="/about_me"
             className="xs:w-60 xs:h-32 md:w-48 md:h-36 lg:w-80 xl:h-48 border  xs:m-2 xl:m-5 p-15 text-left no-underline border-white rounded-xl hover:scale-105 transition duration-700 ease-in-out hover:text-fuchsia-400 hover:border-fuchsia-400"
           >
@@ -68,13 +257,17 @@ export default function Home() {
               <h2 className="md:text-2xl lg:text-4xl m-1 hover:normal-case">
                 About Me &rarr;
               </h2>
-              <p className="md:text-lg lg:text-2xl m-0 leading-6 hover:normal-case">
+              <p
+                id="info"
+                className="md:text-lg lg:text-2xl m-0 leading-6 hover:normal-case"
+              >
                 Some Information About me and my Skills.
               </p>
             </div>
           </a>
 
           <a
+            id="nooble"
             href="/nooble"
             className="xs:w-60 xs:h-32 md:w-48 md:h-36 lg:w-80 xl:h-48 border  xs:m-2 xl:m-5 p-15 text-left no-underline border-white rounded-xl hover:scale-105 transition duration-700 ease-in-out hover:text-fuchsia-400 hover:border-fuchsia-400"
           >
@@ -89,6 +282,7 @@ export default function Home() {
           </a>
 
           <a
+            id="todo"
             href="/to-do"
             className="xs:w-60 xs:h-32 md:w-48 md:h-36 lg:w-80 xl:h-48 border xs:m-2 xl:m-5 p-15 text-left no-underline border-white rounded-xl hover:scale-105 transition duration-700 ease-in-out hover:text-fuchsia-400 hover:border-fuchsia-400"
           >

@@ -21,7 +21,7 @@ export default function Home() {
         <h1 className="text-4xl underline"> Nooble </h1>
         <div className="grid grid-cols-2">
         <Link href="https://github.com/Filipza/LF3">
-            <img src="../assets/nooble/git.png" alt="git" className="w-10 hover:scale-125 transition duration-600 cursor-pointer"/>
+            <img src="../assets/nooble/git.png" alt="git" className="w-14 hover:scale-125 transition duration-600 cursor-pointer"/>
           </Link>
           <button href="/login">
             <img src="../assets/Navigation/login.png" alt="Login" className="w-10 bg-transparent border-none hover:scale-125 transition duration-600 cursor-pointer"/>
