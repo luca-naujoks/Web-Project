@@ -13,11 +13,10 @@ export default function Post({ postData }) {
 
       <div className="">
         <div className="flex justify-between transition duration-600  px-5 items-center">
-          <div className="mt-3">
-          </div>
+          <div className="mt-3"></div>
 
           <h1 className="text-5xl"> Nooble </h1>
-          
+
           <div className="mt-3">
             <Link href="/nooble">
               <text className="md:text-2xl hover:text-red-500">&#x2718;</text>

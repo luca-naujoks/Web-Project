@@ -1,8 +1,7 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import Link from 'next/link'
-import Script from 'next/script'
-
+import Head from "next/head";
+import Image from "next/image";
+import Link from "next/link";
+import Script from "next/script";
 
 export default function Home() {
   return (
@@ -13,195 +12,461 @@ export default function Home() {
         <link rel="icon" href="/Axolotl_Logo.png" />
       </Head>
       <main className="m-5">
-    
-      <div className="flex justify-between m-2">
+        <div className="flex justify-between m-2">
           <Link href="/">
-            <img src="../assets/Navigation/Home.png" alt="Home" className="w-10 hover:scale-125 transition duration-600 cursor-pointer"/>
+            <img
+              src="../assets/Navigation/Home.png"
+              alt="Home"
+              className="w-10 hover:scale-125 transition duration-600 cursor-pointer"
+            />
           </Link>
-        <h1 className="text-4xl underline"> Nooble </h1>
-        <div className="grid grid-cols-2">
-        <Link href="https://github.com/Filipza/LF3">
-            <img src="../assets/nooble/git.png" alt="git" className="w-14 hover:scale-125 transition duration-600 cursor-pointer"/>
+          <h1 className="text-4xl underline"> Nooble </h1>
+          <div className="grid grid-cols-2">
+            <Link href="https://github.com/Filipza/LF3">
+              <img
+                src="../assets/nooble/git.png"
+                alt="git"
+                className="w-14 hover:scale-125 transition duration-600 cursor-pointer"
+              />
+            </Link>
+            <button href="/login">
+              <img
+                src="../assets/Navigation/login.png"
+                alt="Login"
+                className="w-10 bg-transparent border-none hover:scale-125 transition duration-600 cursor-pointer"
+              />
+            </button>
+          </div>
+        </div>
+        <hr className="m-3 border-neutral-900 border-1" />
+
+        <div className="flex xs:flex-col lg:flex-row">
+          <Link
+            href="/nooble"
+            className="bg-[#161b22] rounded-md xs:w-auto lg:w-2/6 m-4 transition-all duration-600 p-10 hover:transform-none"
+          >
+            <div className="">
+              <h2 className="text-xl underline">
+                LF1 Eigene rolle im Betrieb kennenlernen
+              </h2>
+            </div>
+            <div className=""></div>
           </Link>
-          <button href="/login">
-            <img src="../assets/Navigation/login.png" alt="Login" className="w-10 bg-transparent border-none hover:scale-125 transition duration-600 cursor-pointer"/>
-          </button>
-        </div>
-      </div>
-      <hr className="m-3 border-neutral-900 border-1"/>
 
+          <Link
+            href="/nooble"
+            className="bg-[#161b22] rounded-md xs:w-auto lg:w-2/6 m-4 transition-all duration-600 p-10 hover:transform-none"
+          >
+            <div className="">
+              <h2 className="text-xl underline">
+                LF2 Arbeitsplätze richtig Ausstatten
+              </h2>
+            </div>
+            <div className=""></div>
+          </Link>
 
-
-      <div className="flex xs:flex-col lg:flex-row">
-
-<Link href="/nooble" className="bg-[#161b22] rounded-md xs:w-auto lg:w-2/6 m-4 transition-all duration-600 p-10 hover:transform-none">
-  
-   <div className=""><h2 className="text-xl underline">LF1 Eigene rolle im Betrieb kennenlernen</h2></div>
-   <div className="">
-   </div>
-</Link>
-
- 
-<Link href="/nooble" className="bg-[#161b22] rounded-md xs:w-auto lg:w-2/6 m-4 transition-all duration-600 p-10 hover:transform-none">
-   <div className=""><h2 className="text-xl underline">LF2 Arbeitsplätze richtig Ausstatten</h2></div>
-   <div className="">  
-   </div>
-</Link>
-
-<Link href="/nooble/LF3"  className="bg-[#161b22] rounded-md xs:w-auto lg:w-2/6 m-4 transition-all duration-600 p-10 hover:scale-105">
-  <div className=""><h2 className="text-xl underline">LF3 Netzwerktechnik</h2></div> 
-   <div className="hover:transform-none">
-         <div><span className="text-green-400 font-mono">berufsschule</span>: <span className="text-sky-400 font-mono">Itech BS 14</span></div>
-         <br></br>
-         <div><span className="text-green-400 font-mono">date</span>: <span className="text-sky-400 font-mono">05.10-08.10.22, 24.10-10.11.22</span></div>
-         <br></br>
-         <div><span className="text-green-400 font-mono">fields_of_interests</span>:</div>
-         <div><span className="text-sky-400 font-mono">[</span></div>
-         <div><span className="text-sky-400 font-mono"><span className="text-white font-mono pl-5"> "</span>Web Development<span className="font-mono text-white">"</span></span><span className="text-sky-400 font-mono">,</span></div>
-         <div><span className="text-sky-400 font-mono"><span className="text-white font-mono pl-5"> "</span>Networking<span className="font-mono text-white">"</span></span><span className="text-sky-400 font-mono">,</span></div>
-         <div><span className="text-sky-400 font-mono"><span className="text-white font-mono pl-5"> "</span>Programming<span className="font-mono text-white">"</span></span><span className="text-sky-400 font-mono">,</span></div>
-         <div><span className="text-sky-400 font-mono">]</span></div>
-         <div><span className="text-green-400 font-mono">technical_devices</span>:</div>
-         <div><span className="text-sky-400 font-mono">[</span></div>
-         <div> <span className="text-sky-400 font-mono"><span className="text-white font-mono pl-5"> "</span>Rraspberry pis (4)<span className="font-mono text-white">"</span></span></div>
-         <div> <span className="text-sky-400 font-mono"><span className="text-white font-mono pl-5"> "</span>managed ethernet switch<span className="font-mono text-white">"</span></span></div>
-         <div><span className="text-sky-400 font-mono">]</span></div>
-         <div><span className="text-green-400 font-mono">products</span>:</div>
-         <div><span className="text-sky-400 font-mono">[</span></div>
-         <div> <span className="text-sky-400 font-mono"><span className="text-white font-mono pl-5"> "</span>functional Network<span className="font-mono text-white">"</span></span></div>
-         <div> <span className="text-sky-400 font-mono"><span className="text-white font-mono pl-5"> "</span>ipv4 calculator<span className="font-mono text-white">"</span></span></div>
-         <div> <span className="text-sky-400 font-mono"><span className="text-white font-mono pl-5"> "</span>Next js website<span className="font-mono text-white">"</span></span></div>
-         <div><span className="text-sky-400 font-mono">]</span></div>
-         <br></br>
-   </div>
- </Link>
- 
-
-</div>
-
-    <div className="flex xs:flex-col lg:flex-row">
-
-
-    <Link href="/nooble" className="bg-[#161b22] rounded-md xs:w-auto lg:w-2/6 m-4 transition-all duration-600 p-10 hover:transform-none">
-       <div className=""><h2 className="text-xl underline">LF4 Schutzbedarfsanalyse</h2></div> 
-        <div className="">
-
-        </div>
-    </Link>  
-
-      
-    <Link href="/nooble/LF5" className="bg-[#161b22] rounded-md xs:w-auto lg:w-2/6 m-4 transition-all duration-600 p-10 hover:scale-105">
-    <div className=""><h2 className="text-xl underline">LF5 Datenbanken</h2></div> 
-   <div className="hover:transform-none">
-         <div><span className="text-green-400 font-mono">berufsschule</span>: <span className="text-sky-400 font-mono">Itech BS 14</span></div>
-         <br></br>
-         <div><span className="text-green-400 font-mono">zeitraum</span>: <span className="text-sky-400 font-mono">15.06-06.07.22</span></div>
+          <Link
+            href="/nooble/LF3"
+            className="bg-[#161b22] rounded-md xs:w-auto lg:w-2/6 m-4 transition-all duration-600 p-10 hover:scale-105"
+          >
+            <div className="">
+              <h2 className="text-xl underline">LF3 Netzwerktechnik</h2>
+            </div>
+            <div className="hover:transform-none">
+              <div>
+                <span className="text-green-400 font-mono">berufsschule</span>:{" "}
+                <span className="text-sky-400 font-mono">Itech BS 14</span>
+              </div>
               <br></br>
-              <div><span className="text-green-400 font-mono">themen aus dem lernfeld</span>:</div>
-              <div><span className="text-sky-400 font-mono">[</span></div>
-              <div><span className="text-sky-400 font-mono"><span className="text-white font-mono pl-5"> "</span>programm development<span className="font-mono text-white">"</span></span><span className="text-sky-400 font-mono">,</span></div>
-              <div><span className="text-sky-400 font-mono"><span className="text-white font-mono pl-5"> "</span>SQL datenbanken kontrollieren<span className="font-mono text-white">"</span></span><span className="text-sky-400 font-mono">,</span></div>
-              <div><span className="text-sky-400 font-mono">]</span></div>
-              <div><span className="text-green-400 font-mono">techische geräte</span>:</div>
-              <div><span className="text-sky-400 font-mono">[</span></div>
-              <div> <span className="text-sky-400 font-mono"><span className="text-white font-mono pl-5"> "</span>Rraspberry pis (3)<span className="font-mono text-white">"</span></span></div>
-              <div><span className="text-sky-400 font-mono">]</span></div>
+              <div>
+                <span className="text-green-400 font-mono">date</span>:{" "}
+                <span className="text-sky-400 font-mono">
+                  05.10-08.10.22, 24.10-10.11.22
+                </span>
+              </div>
               <br></br>
-              <div><span className="text-green-400 font-mono">resultate</span>:</div>
-              <div><span className="text-sky-400 font-mono">[</span></div>
-              <div> <span className="text-sky-400 font-mono"><span className="text-white font-mono pl-5"> "</span>funktionsfähige datenbank<span className="font-mono text-white">"</span></span></div>
-              <div> <span className="text-sky-400 font-mono"><span className="text-white font-mono pl-5"> "</span>programm zur kontrolle der datenbank<span className="font-mono text-white">"</span></span></div>
-              <div> <span className="text-sky-400 font-mono"><span className="text-white font-mono pl-5"> "</span>python<span className="font-mono text-white">"</span></span></div>
-              <div><span className="text-sky-400 font-mono">]</span></div>
-         <br></br>
-   </div>
-    </Link>
-
-    <Link href="/nooble" className="bg-[#161b22] rounded-md xs:w-auto lg:w-2/6 m-4 transition-all duration-600 p-10 hover:transform-none">
-        <div className=""><h2 className="text-xl underline">LF6 Serviceanfragen bearbeiten</h2></div>
-        <div className="">
-
+              <div>
+                <span className="text-green-400 font-mono">
+                  fields_of_interests
+                </span>
+                :
+              </div>
+              <div>
+                <span className="text-sky-400 font-mono">[</span>
+              </div>
+              <div>
+                <span className="text-sky-400 font-mono">
+                  <span className="text-white font-mono pl-5"> "</span>Web
+                  Development<span className="font-mono text-white">"</span>
+                </span>
+                <span className="text-sky-400 font-mono">,</span>
+              </div>
+              <div>
+                <span className="text-sky-400 font-mono">
+                  <span className="text-white font-mono pl-5"> "</span>
+                  Networking<span className="font-mono text-white">"</span>
+                </span>
+                <span className="text-sky-400 font-mono">,</span>
+              </div>
+              <div>
+                <span className="text-sky-400 font-mono">
+                  <span className="text-white font-mono pl-5"> "</span>
+                  Programming<span className="font-mono text-white">"</span>
+                </span>
+                <span className="text-sky-400 font-mono">,</span>
+              </div>
+              <div>
+                <span className="text-sky-400 font-mono">]</span>
+              </div>
+              <div>
+                <span className="text-green-400 font-mono">
+                  technical_devices
+                </span>
+                :
+              </div>
+              <div>
+                <span className="text-sky-400 font-mono">[</span>
+              </div>
+              <div>
+                {" "}
+                <span className="text-sky-400 font-mono">
+                  <span className="text-white font-mono pl-5"> "</span>
+                  Rraspberry pis (4)
+                  <span className="font-mono text-white">"</span>
+                </span>
+              </div>
+              <div>
+                {" "}
+                <span className="text-sky-400 font-mono">
+                  <span className="text-white font-mono pl-5"> "</span>managed
+                  ethernet switch<span className="font-mono text-white">"</span>
+                </span>
+              </div>
+              <div>
+                <span className="text-sky-400 font-mono">]</span>
+              </div>
+              <div>
+                <span className="text-green-400 font-mono">products</span>:
+              </div>
+              <div>
+                <span className="text-sky-400 font-mono">[</span>
+              </div>
+              <div>
+                {" "}
+                <span className="text-sky-400 font-mono">
+                  <span className="text-white font-mono pl-5"> "</span>
+                  functional Network
+                  <span className="font-mono text-white">"</span>
+                </span>
+              </div>
+              <div>
+                {" "}
+                <span className="text-sky-400 font-mono">
+                  <span className="text-white font-mono pl-5"> "</span>ipv4
+                  calculator<span className="font-mono text-white">"</span>
+                </span>
+              </div>
+              <div>
+                {" "}
+                <span className="text-sky-400 font-mono">
+                  <span className="text-white font-mono pl-5"> "</span>Next js
+                  website<span className="font-mono text-white">"</span>
+                </span>
+              </div>
+              <div>
+                <span className="text-sky-400 font-mono">]</span>
+              </div>
+              <br></br>
+            </div>
+          </Link>
         </div>
-    </Link>
 
-    </div>
+        <div className="flex xs:flex-col lg:flex-row">
+          <Link
+            href="/nooble"
+            className="bg-[#161b22] rounded-md xs:w-auto lg:w-2/6 m-4 transition-all duration-600 p-10 hover:transform-none"
+          >
+            <div className="">
+              <h2 className="text-xl underline">LF4 Schutzbedarfsanalyse</h2>
+            </div>
+            <div className=""></div>
+          </Link>
 
+          <Link
+            href="/nooble/LF5"
+            className="bg-[#161b22] rounded-md xs:w-auto lg:w-2/6 m-4 transition-all duration-600 p-10 hover:scale-105"
+          >
+            <div className="">
+              <h2 className="text-xl underline">LF5 Datenbanken</h2>
+            </div>
+            <div className="hover:transform-none">
+              <div>
+                <span className="text-green-400 font-mono">berufsschule</span>:{" "}
+                <span className="text-sky-400 font-mono">Itech BS 14</span>
+              </div>
+              <br></br>
+              <div>
+                <span className="text-green-400 font-mono">zeitraum</span>:{" "}
+                <span className="text-sky-400 font-mono">15.06-06.07.22</span>
+              </div>
+              <br></br>
+              <div>
+                <span className="text-green-400 font-mono">
+                  themen aus dem lernfeld
+                </span>
+                :
+              </div>
+              <div>
+                <span className="text-sky-400 font-mono">[</span>
+              </div>
+              <div>
+                <span className="text-sky-400 font-mono">
+                  <span className="text-white font-mono pl-5"> "</span>programm
+                  development<span className="font-mono text-white">"</span>
+                </span>
+                <span className="text-sky-400 font-mono">,</span>
+              </div>
+              <div>
+                <span className="text-sky-400 font-mono">
+                  <span className="text-white font-mono pl-5"> "</span>SQL
+                  datenbanken kontrollieren
+                  <span className="font-mono text-white">"</span>
+                </span>
+                <span className="text-sky-400 font-mono">,</span>
+              </div>
+              <div>
+                <span className="text-sky-400 font-mono">]</span>
+              </div>
+              <div>
+                <span className="text-green-400 font-mono">
+                  techische geräte
+                </span>
+                :
+              </div>
+              <div>
+                <span className="text-sky-400 font-mono">[</span>
+              </div>
+              <div>
+                {" "}
+                <span className="text-sky-400 font-mono">
+                  <span className="text-white font-mono pl-5"> "</span>
+                  Rraspberry pis (3)
+                  <span className="font-mono text-white">"</span>
+                </span>
+              </div>
+              <div>
+                <span className="text-sky-400 font-mono">]</span>
+              </div>
+              <br></br>
+              <div>
+                <span className="text-green-400 font-mono">resultate</span>:
+              </div>
+              <div>
+                <span className="text-sky-400 font-mono">[</span>
+              </div>
+              <div>
+                {" "}
+                <span className="text-sky-400 font-mono">
+                  <span className="text-white font-mono pl-5"> "</span>
+                  funktionsfähige datenbank
+                  <span className="font-mono text-white">"</span>
+                </span>
+              </div>
+              <div>
+                {" "}
+                <span className="text-sky-400 font-mono">
+                  <span className="text-white font-mono pl-5"> "</span>programm
+                  zur kontrolle der datenbank
+                  <span className="font-mono text-white">"</span>
+                </span>
+              </div>
+              <div>
+                {" "}
+                <span className="text-sky-400 font-mono">
+                  <span className="text-white font-mono pl-5"> "</span>python
+                  <span className="font-mono text-white">"</span>
+                </span>
+              </div>
+              <div>
+                <span className="text-sky-400 font-mono">]</span>
+              </div>
+              <br></br>
+            </div>
+          </Link>
 
-    <div className="flex xs:flex-col lg:flex-row">
-
-    <Link href="/nooble/LF7" className="bg-[#161b22] rounded-md xs:w-auto lg:w-2/6 m-4 transition-all duration-600 p-10 hover:scale-105 ">
-    <div className=""><h2 className="text-xl underline">LF7 Cyber-physische Systeme</h2></div> 
-    <div className="hover:transform-none">
-    <span className="text-green-400 font-mono">date</span>: <span className="text-sky-400 font-mono">---</span>
-        <br></br>
-        <div><span className="text-green-400 font-mono">fields_of_interests</span>:</div>
-        <div><span className="text-sky-400 font-mono">[</span></div>
-        <div><span className="text-sky-400 font-mono"><span className="text-white font-mono pl-5"> "</span>Programm Development<span className="font-mono text-white">"</span></span><span className="text-sky-400 font-mono">,</span></div>
-        <div><span className="text-sky-400 font-mono"><span className="text-white font-mono pl-5"> "</span>Hardware<span className="font-mono text-white">"</span></span><span className="text-sky-400 font-mono">,</span></div>
-        <div><span className="text-sky-400 font-mono">]</span></div>
-        <div><span className="text-green-400 font-mono">technical_devices</span>:</div>
-        <div><span className="text-sky-400 font-mono">[</span></div>
-        <div> <span className="text-sky-400 font-mono"><span className="text-white font-mono pl-5"> "</span>---<span className="font-mono text-white">"</span></span></div>
-        <div><span className="text-sky-400 font-mono">]</span></div>
-        <br></br>
-        <div><span className="text-green-400 font-mono">products</span>:</div>
-        <div><span className="text-sky-400 font-mono">[</span></div>
-        <div> <span className="text-sky-400 font-mono"><span className="text-white font-mono pl-5"> "</span>---<span className="font-mono text-white">"</span></span></div>
-        <div> <span className="text-sky-400 font-mono"><span className="text-white font-mono pl-5"> "</span>---<span className="font-mono text-white">"</span></span></div>
-        <div> <span className="text-sky-400 font-mono"><span className="text-white font-mono pl-5"> "</span>---<span className="font-mono text-white">"</span></span></div>
-        <div><span className="text-sky-400 font-mono">]</span></div>
-        <br></br>
-   </div>
-    </Link>
-
-      
-    <Link href="/nooble" className="bg-[#161b22] rounded-md xs:w-auto lg:w-2/6 m-4 transition-all duration-600 p-10 hover:transform-none">
-       
-        <div className=""><h2 className="text-xl underline">LF8 System übergreifende daten bereitstellen</h2></div>
-        <div className="">
-       </div>
-    </Link>
-
-    <Link href="/nooble" className="bg-[#161b22] rounded-md xs:w-auto lg:w-2/6 m-4 transition-all duration-600 p-10 hover:transform-none">
-        <div className=""><h2 className="text-xl underline">LF9 netzwerke & Dienste bereitstellen</h2></div>
-        <div className="">
-
+          <Link
+            href="/nooble"
+            className="bg-[#161b22] rounded-md xs:w-auto lg:w-2/6 m-4 transition-all duration-600 p-10 hover:transform-none"
+          >
+            <div className="">
+              <h2 className="text-xl underline">
+                LF6 Serviceanfragen bearbeiten
+              </h2>
+            </div>
+            <div className=""></div>
+          </Link>
         </div>
-    </Link>
 
-    </div>
+        <div className="flex xs:flex-col lg:flex-row">
+          <Link
+            href="/nooble/LF7"
+            className="bg-[#161b22] rounded-md xs:w-auto lg:w-2/6 m-4 transition-all duration-600 p-10 hover:scale-105 "
+          >
+            <div className="">
+              <h2 className="text-xl underline">LF7 Cyber-physische Systeme</h2>
+            </div>
+            <div className="hover:transform-none">
+              <span className="text-green-400 font-mono">date</span>:{" "}
+              <span className="text-sky-400 font-mono">---</span>
+              <br></br>
+              <div>
+                <span className="text-green-400 font-mono">
+                  fields_of_interests
+                </span>
+                :
+              </div>
+              <div>
+                <span className="text-sky-400 font-mono">[</span>
+              </div>
+              <div>
+                <span className="text-sky-400 font-mono">
+                  <span className="text-white font-mono pl-5"> "</span>Programm
+                  Development<span className="font-mono text-white">"</span>
+                </span>
+                <span className="text-sky-400 font-mono">,</span>
+              </div>
+              <div>
+                <span className="text-sky-400 font-mono">
+                  <span className="text-white font-mono pl-5"> "</span>Hardware
+                  <span className="font-mono text-white">"</span>
+                </span>
+                <span className="text-sky-400 font-mono">,</span>
+              </div>
+              <div>
+                <span className="text-sky-400 font-mono">]</span>
+              </div>
+              <div>
+                <span className="text-green-400 font-mono">
+                  technical_devices
+                </span>
+                :
+              </div>
+              <div>
+                <span className="text-sky-400 font-mono">[</span>
+              </div>
+              <div>
+                {" "}
+                <span className="text-sky-400 font-mono">
+                  <span className="text-white font-mono pl-5"> "</span>---
+                  <span className="font-mono text-white">"</span>
+                </span>
+              </div>
+              <div>
+                <span className="text-sky-400 font-mono">]</span>
+              </div>
+              <br></br>
+              <div>
+                <span className="text-green-400 font-mono">products</span>:
+              </div>
+              <div>
+                <span className="text-sky-400 font-mono">[</span>
+              </div>
+              <div>
+                {" "}
+                <span className="text-sky-400 font-mono">
+                  <span className="text-white font-mono pl-5"> "</span>---
+                  <span className="font-mono text-white">"</span>
+                </span>
+              </div>
+              <div>
+                {" "}
+                <span className="text-sky-400 font-mono">
+                  <span className="text-white font-mono pl-5"> "</span>---
+                  <span className="font-mono text-white">"</span>
+                </span>
+              </div>
+              <div>
+                {" "}
+                <span className="text-sky-400 font-mono">
+                  <span className="text-white font-mono pl-5"> "</span>---
+                  <span className="font-mono text-white">"</span>
+                </span>
+              </div>
+              <div>
+                <span className="text-sky-400 font-mono">]</span>
+              </div>
+              <br></br>
+            </div>
+          </Link>
 
-    <h2 className="text-red-900 text-4xl p-2 text-center">Ausbildungs Spezifisch</h2>
-    <hr className="m-3 border-red-900 border-1"/>
+          <Link
+            href="/nooble"
+            className="bg-[#161b22] rounded-md xs:w-auto lg:w-2/6 m-4 transition-all duration-600 p-10 hover:transform-none"
+          >
+            <div className="">
+              <h2 className="text-xl underline">
+                LF8 System übergreifende daten bereitstellen
+              </h2>
+            </div>
+            <div className=""></div>
+          </Link>
 
-
-    <div className="flex xs:flex-col lg:flex-row">
-    
-    <Link href="/nooble" className="bg-[#161b22] rounded-md xs:w-auto lg:w-2/6 m-4 transition-all duration-600 p-10 hover:transform-none">
-       <div className=""><h2 className="text-xl underline">LF10 Serverdienste & Adminaufgaben Automatisieren</h2></div> 
-        <div className="">
-
+          <Link
+            href="/nooble"
+            className="bg-[#161b22] rounded-md xs:w-auto lg:w-2/6 m-4 transition-all duration-600 p-10 hover:transform-none"
+          >
+            <div className="">
+              <h2 className="text-xl underline">
+                LF9 netzwerke & Dienste bereitstellen
+              </h2>
+            </div>
+            <div className=""></div>
+          </Link>
         </div>
-    </Link>
 
-      
-    <Link href="/nooble" className="bg-[#161b22] rounded-md xs:w-auto lg:w-2/6 m-4 transition-all duration-600 p-10 hover:transform-none">
-        <div className=""><h2 className="text-xl underline">LF11 Betrieb & Sicherheit vernetzter Systeme</h2></div>
-        <div className="">
+        <h2 className="text-red-900 text-4xl p-2 text-center">
+          Ausbildungs Spezifisch
+        </h2>
+        <hr className="m-3 border-red-900 border-1" />
 
+        <div className="flex xs:flex-col lg:flex-row">
+          <Link
+            href="/nooble"
+            className="bg-[#161b22] rounded-md xs:w-auto lg:w-2/6 m-4 transition-all duration-600 p-10 hover:transform-none"
+          >
+            <div className="">
+              <h2 className="text-xl underline">
+                LF10 Serverdienste & Adminaufgaben Automatisieren
+              </h2>
+            </div>
+            <div className=""></div>
+          </Link>
+
+          <Link
+            href="/nooble"
+            className="bg-[#161b22] rounded-md xs:w-auto lg:w-2/6 m-4 transition-all duration-600 p-10 hover:transform-none"
+          >
+            <div className="">
+              <h2 className="text-xl underline">
+                LF11 Betrieb & Sicherheit vernetzter Systeme
+              </h2>
+            </div>
+            <div className=""></div>
+          </Link>
+
+          <Link
+            href="/nooble"
+            className="bg-[#161b22] rounded-md xs:w-auto lg:w-2/6 m-4 transition-all duration-600 p-10 hover:transform-none"
+          >
+            <div className="">
+              <h2 className="text-xl underline">
+                LF12 Kundenspezifische Systemintegration
+              </h2>
+            </div>
+            <div className=""></div>
+          </Link>
         </div>
-    </Link>
-      
-    <Link href="/nooble" className="bg-[#161b22] rounded-md xs:w-auto lg:w-2/6 m-4 transition-all duration-600 p-10 hover:transform-none">
-        <div className=""><h2 className="text-xl underline">LF12 Kundenspezifische Systemintegration</h2></div>
-        <div className="">
-
-        </div>
-    </Link>
-
-    </div>
       </main>
     </div>
-  )
-
+  );
 }
