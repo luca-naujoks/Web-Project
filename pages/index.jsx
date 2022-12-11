@@ -3,11 +3,11 @@ import styles from "../styles/Home.module.css";
 import Link from "next/link";
 import React from "react";
 import { Overlay } from "../components/login";
-import { showlogin } from "../components/login"
+import { showlogin } from "../components/login";
 
 function openlogin() {
   document.getElementById("links").style.filter = "blur(4px)";
-  showlogin()
+  showlogin();
 }
 
 export default function Home() {
@@ -21,7 +21,7 @@ export default function Home() {
 
       <div className="flex justify-end">
         <div>
-          <Link href="" onClick={openlogin}> 
+          <Link href="" onClick={openlogin}>
             <img
               src="../assets/Navigation/login.png"
               alt="Login"
