@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import React from "react";
-import { Line } from "react-chartjs-2";
 
 export function Dashboard() {
 
@@ -115,34 +114,34 @@ export function Dashboard() {
       <hr className="m-3 border-gray-600" />
 
       <div id="line tree" className="flex">
-        <div className="bg-[#161b22] rounded-xl m-3 p-2 w-80 cursor-pointer">
+        <div className="bg-[#161b22] rounded-xl m-3 p-2 w-80 hover:scale-105 duration-300 cursor-pointer">
           <h1 className="pb-2 md:text-2xl">
             <img
               src="../assets/hub/lists.png"
               alt="lists"
-              className="w-8 h-8 fill-current inline-block "
+              className="w-8 h-8 fill-current inline-block"
             />
             <span className="text-gray-500"> Home</span>
           </h1>
         </div>
 
-        <div className="bg-[#161b22] rounded-xl m-3 p-2 w-80 cursor-pointer">
+        <div className="bg-[#161b22] rounded-xl m-3 p-2 w-80 hover:scale-105 duration-300 cursor-pointer">
           <h1 className="pb-2 md:text-2xl">
             <img
               src="../assets/hub/lists.png"
               alt="lists"
-              className="w-8 h-8 fill-current inline-block "
+              className="w-8 h-8 fill-current inline-block"
             />
             <span className="text-gray-500"> Dailys</span>
           </h1>
         </div>
 
-        <div className="bg-[#161b22] rounded-xl m-3 p-2 w-80 cursor-pointer">
+        <div className="bg-[#161b22] rounded-xl m-3 p-2 w-80 hover:scale-105 duration-300 cursor-pointer">
           <a className="pb-2 md:text-2xl">
             <img
               src="../assets/hub/lists.png"
               alt="lists"
-              className="w-8 h-8 fill-current inline-block "
+              className="w-8 h-8 fill-current inline-block"
             />
             <span className="text-gray-500"> Einkaufen</span>
           </a>

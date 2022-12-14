@@ -4,43 +4,36 @@ import Link from "next/link";
 import { Dashboard } from "../components/dashboard";
 import { ToDo } from "../components/todo";
 import { Settings } from "../components/settings";
+import { Lists } from "../components/lists";
 
-export default function Contact() {
+export default function Hub() {
+
+
+
   let [dashboardToggled, isDashboardToggled] = useState(true);
   let [listsToggled, isListsToggled] = useState(false);
   let [todoToggled, isToDoToggled] = useState(false);
-  let [serverToggled, isServerDashboardToggled] = useState(false);
   let [settingsToggled, isSettingsToggled] = useState(false);
 
   const dashboardbtn = () => {
     isDashboardToggled((dashboardToggled = true));
     isListsToggled((listsToggled = false));
     isToDoToggled((todoToggled = false));
-    isServerDashboardToggled((serverToggled = false));
     isSettingsToggled((settingsToggled = false));
   };
 
-  const listsbtn = () => {
+  const listsbtn = (id, event) => {
     isDashboardToggled((dashboardToggled = false));
     isListsToggled((listsToggled = true));
     isToDoToggled((todoToggled = false));
-    isServerDashboardToggled((serverToggled = false));
     isSettingsToggled((settingsToggled = false));
+    
   };
 
   const todobtn = () => {
     isDashboardToggled((dashboardToggled = false));
     isListsToggled((listsToggled = false));
     isToDoToggled((todoToggled = true));
-    isServerDashboardToggled((serverToggled = false));
-    isSettingsToggled((settingsToggled = false));
-  };
-
-  const serverbtn = () => {
-    isDashboardToggled((dashboardToggled = false));
-    isListsToggled((listsToggled = false));
-    isToDoToggled((todoToggled = false));
-    isServerDashboardToggled((serverToggled = true));
     isSettingsToggled((settingsToggled = false));
   };
 
@@ -48,7 +41,6 @@ export default function Contact() {
     isDashboardToggled((dashboardToggled = false));
     isListsToggled((listsToggled = false));
     isToDoToggled((todoToggled = false));
-    isServerDashboardToggled((serverToggled = false));
     isSettingsToggled((settingsToggled = true));
   };
 
@@ -115,12 +107,11 @@ export default function Contact() {
               <span className="md:text-lg"> ToDo</span>
             </a>
 
-
-            
-          <p className="text-center text-xl">Your Lists</p>
-          <hr />
-          <a
-              
+            <p className="text-center text-xl">Your Lists</p>
+            <hr />
+            <a
+              id={1}
+              onClick={(e) => listsbtn("one", e)}
               className="text-sm font-medium text-white py-2 px-2 hover:bg-gray-500 hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out cursor-pointer"
             >
               <img
@@ -132,9 +123,9 @@ export default function Contact() {
             </a>
 
             <a
-              
-              className="text-sm font-medium text-white py-2 px-2 hover:bg-gray-500 hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out cursor-pointer"
-            >
+              id={2}
+              onClick={(e) => listsbtn("two", e)}
+              className="text-sm font-medium text-white py-2 px-2 hover:bg-gray-500 hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out cursor-pointer">
               <img
                 src="../assets/hub/lists.png"
                 alt="lists"
@@ -144,9 +135,9 @@ export default function Contact() {
             </a>
 
             <a
-              
-              className="text-sm font-medium text-white py-2 px-2 hover:bg-gray-500 hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out cursor-pointer"
-            >
+              id={3}
+              onClick={(e) => listsbtn("tree", e)}
+              className="text-sm font-medium text-white py-2 px-2 hover:bg-gray-500 hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out cursor-pointer">
               <img
                 src="../assets/hub/lists.png"
                 alt="lists"
@@ -154,15 +145,12 @@ export default function Contact() {
               />
               <span className="md:text-lg"> Einkaufen</span>
             </a>
-
-
-
-
           </div>
           <div className="absolute bottom-[2%]">
             <a
               onClick={settingsbtn}
-              className="text-sm font-medium text-white py-2 px-2 hover:bg-gray-500 hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out cursor-pointer">
+              className="text-sm font-medium text-white py-2 px-2 hover:bg-gray-500 hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out cursor-pointer"
+            >
               <img
                 src="../assets/hub/settings.png"
                 alt="settings"
@@ -189,11 +177,6 @@ export default function Contact() {
           {todoToggled && (
             <div id="ToDO" className="">
               <ToDo />
-            </div>
-          )}
-          {serverToggled && (
-            <div id="Server Dashboard" className="">
-              <ServerDashboard />
             </div>
           )}
 
