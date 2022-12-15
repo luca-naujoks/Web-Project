@@ -18,8 +18,9 @@ module.exports = {
       
     },
     extend: {
-      olors: {
-        'thin-blue': '#161b22',
+      spacing: {
+        '128': '32rem',
+        '200': '40rem',
       },
     },
   },

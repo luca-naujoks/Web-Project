@@ -58,7 +58,7 @@ export default function Hub() {
       >
         <div
           id="sidebar"
-          className="bg-[#161b22] h-screen md:block shadow-xl px-3 w-30 md:w-[15%] overflow-x-hidden transition-transform duration-300 ease-in-out"
+          className="bg-[#161b22] h-screen md:block shadow-xl px-3 w-30 md:w-[15%] transition-transform duration-300 ease-in-out"
           x-show="sidenav"
         >
           <div className="flex border-2 border-gray-600 rounded-md mb-[5%]">
@@ -145,8 +145,6 @@ export default function Hub() {
               />
               <span className="md:text-lg"> Einkaufen</span>
             </a>
-          </div>
-          <div className="absolute bottom-[2%]">
             <a
               onClick={settingsbtn}
               className="text-sm font-medium text-white py-2 px-2 hover:bg-gray-500 hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out cursor-pointer"
@@ -161,7 +159,7 @@ export default function Hub() {
           </div>
         </div>
 
-        <div className="bg-black rounded-tl-xl w-[85%]">
+        <div className="bg-black rounded-tl-xl w-[85%] overflow-auto">
           {dashboardToggled && (
             <div id="dashboard">
               <Dashboard />
