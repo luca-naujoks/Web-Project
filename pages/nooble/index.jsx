@@ -15,14 +15,14 @@ export default function Home() {
         <div className="flex justify-between m-2">
           <Link href="/">
             <img
-              src="../assets/Navigation/Home.png"
+              src="../assets/Navigation/home.png"
               alt="Home"
               className="w-10 hover:scale-125 transition duration-600 cursor-pointer"
             />
           </Link>
           <h1 className="text-4xl underline"> Nooble </h1>
           <div className="grid grid-cols-2">
-            <Link href="https://github.com/Filipza/LF3">
+            <Link href="https://github.com/luca-naujoks/Itech-IT2x">
               <img
                 src="../assets/nooble/git.png"
                 alt="git"
