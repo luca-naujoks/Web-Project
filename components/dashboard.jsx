@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import React from "react";
+import { listbtnbridge } from "../pages/hub";
+import { listsbtn } from "../pages/hub";
 
 export function Dashboard() {
-
-
   const [commits, setcommits] = useState("55");
 
   const [showip, setshowip] = useState();
@@ -39,7 +39,6 @@ export function Dashboard() {
     displayLan = responseData.latitude;
     displayLon = responseData.longitude;
 
-    console.log(responseData);
     setshowip(displayIp);
     setshowversion(displayVersion);
     setshownetwork(displayNetwork);
@@ -98,8 +97,7 @@ export function Dashboard() {
           <h1 className="pb-2 md:text-2xl text-gray-500">Server CPU Temp</h1>
           <div className="md:text-xl"></div>
           <p className="text-end pr-2 text-sm text-green-400">46°C</p>
-          <div className="border-gray-600 border-2 rounded-lg">
-          </div>
+          <div className="border-gray-600 border-2 rounded-lg"></div>
         </div>
         <div className="bg-[#161b22] rounded-xl m-3 p-2 w-80">
           <h1 className="pb-2 md:text-2xl text-gray-500">Mailbox Storage</h1>
@@ -114,7 +112,11 @@ export function Dashboard() {
       <hr className="m-3 border-gray-600" />
 
       <div id="line tree" className="flex">
-        <div className="bg-[#161b22] rounded-xl m-3 p-2 w-80 hover:scale-105 duration-300 cursor-pointer">
+        <div
+          className="bg-[#161b22] rounded-xl m-3 p-2 w-80 hover:scale-105 duration-300 cursor-pointer"
+          key="Home"
+          onClick={() => listbtn("Home")}
+        >
           <h1 className="pb-2 md:text-2xl">
             <img
               src="../assets/hub/lists.png"

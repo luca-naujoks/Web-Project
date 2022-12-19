@@ -34,7 +34,7 @@ export default function Post({ postData }) {
             {postData.info}
           </div>
 
-          <div className="float-left bg-[#161b22]  xl:w-[50%] rounded-md p-10 text-xl text-white mt-2 mb-1 mr-2 ml-[2.5%]">
+          <div className="float-left bg-[#161b22]  xl:w-[50%] xs:w-auto rounded-md p-10 text-xl text-white mt-2 mb-1 mr-2 ml-[2.5%]">
             <h3 className="underline">Weiterführende Links zum Lernfeld:</h3>
             <a href={postData.link1} target="_blank">
               {postData.title1}
@@ -56,7 +56,13 @@ export default function Post({ postData }) {
             </p>
           </div>
 
-          <Image width={650} height={650} src={postData.image} className="" />
+          <Image
+            width={650}
+            height={650}
+            src={postData.image}
+            className=""
+            alt="LF Image"
+          />
         </main>
       </div>
     </div>

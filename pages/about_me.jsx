@@ -2,7 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import { Overlay } from "../components/login";
-import {showlogin} from "../components/login";
+import { showlogin } from "../components/login";
 
 export default function about_me() {
   return (
