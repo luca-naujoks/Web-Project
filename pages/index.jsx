@@ -85,7 +85,7 @@ export default function Home() {
                 Bobby Hub &rarr;
               </h2>
               <p className="md:text-lg lg:text-2xl m-0 leading-6 hover:normal-case">
-                A Hub with Dashboards, Lists and an Casino $$
+                A Hub with Dashboards, Lists and an Casino
               </p>
             </div>
           </a>
