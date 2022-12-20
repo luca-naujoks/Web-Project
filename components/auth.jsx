@@ -32,10 +32,10 @@ export default function Auth({ req }) {
             document.getElementById("dropdownmenu").classList.remove("hidden");
           }}
         >
-          <p className="text-lg">{session.user.name}&nbsp;</p>
+          <p className="xs:text-sm md:text-md">{session.user.name}&nbsp;</p>
           <img
             src={session.user.image}
-            className="rounded-full h-12 w-12 "
+            className="rounded-full xs:h-5 md:h-10 "
           ></img>
         </a>
         <div
