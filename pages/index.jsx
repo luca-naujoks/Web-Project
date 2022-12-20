@@ -45,7 +45,7 @@ export default function Home() {
           <a
             id="me"
             href="/about_me"
-            className="xs:w-60 xs:h-32 md:w-48 md:h-36 lg:w-80 xl:h-48 border  xs:m-2 xl:m-5 p-15 text-left no-underline border-[#374455] border-4 text-[#374455]  rounded-xl hover:scale-105 transition duration-700 ease-in-out hover:text-white  hover:border-white  "
+            className="xs:w-60 xs:h-32 md:w-52 md:h-36 lg:w-80 xl:h-48 border  xs:m-2 xl:m-5 p-15 text-left no-underline border-[#374455] border-4 text-[#374455]  rounded-xl hover:scale-105 transition duration-700 ease-in-out hover:text-white  hover:border-white  "
           >
             <div className="transition-all p-4">
               <h2 className="md:text-2xl lg:text-4xl m-1 hover:normal-case">
@@ -63,7 +63,7 @@ export default function Home() {
           <a
             id="nooble"
             href="/nooble"
-            className="xs:w-60 xs:h-32 md:w-48 md:h-36 lg:w-80 xl:h-48 border  xs:m-2 xl:m-5 p-15 text-left no-underline border-[#374455] border-4 text-[#374455]  rounded-xl hover:scale-105 transition duration-700 ease-in-out hover:text-white  hover:border-white  "
+            className="xs:w-60 xs:h-32 md:w-52 md:h-36 lg:w-80 xl:h-48 border  xs:m-2 xl:m-5 p-15 text-left no-underline border-[#374455] border-4 text-[#374455]  rounded-xl hover:scale-105 transition duration-700 ease-in-out hover:text-white  hover:border-white  "
           >
             <div className="transition-all p-4">
               <h2 className="md:text-2xl lg:text-4xl m-1 hover:normal-case">
@@ -78,9 +78,9 @@ export default function Home() {
           <a
             id="todo"
             href="/hub"
-            className="xs:w-60 xs:h-32 md:w-48 md:h-36 lg:w-80 xl:h-48 border xs:m-2 xl:m-5 p-15 text-left no-underline border-[#374455] border-4 text-[#374455]  rounded-xl hover:scale-105 transition duration-700 ease-in-out hover:text-white  hover:border-white  "
+            className="xs:w-60 xs:h-32 md:w-52 md:h-36 lg:w-80 xl:h-48 border xs:m-2 xl:m-5 p-15 text-left no-underline border-[#374455] border-4 text-[#374455]  rounded-xl hover:scale-105 transition duration-700 ease-in-out hover:text-white  hover:border-white  "
           >
-            <div className="flex flex-nowrap transition-all p-4">
+            <div className="transition-all p-4">
               <h2 className="md:text-2xl lg:text-4xl m-1 hover:normal-case">
                 Bobby Hub &rarr;
               </h2>
