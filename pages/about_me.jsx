@@ -35,7 +35,7 @@ export default function about_me() {
         <span className="block mx-auto w-1/2"></span>
 
         <div>
-          <h1 className="flex xs:text-2xl md:text-4xl justify-center py-2">
+          <h1 className="flex xs:text-2xl md:text-4xl text-white justify-center py-2">
             💬 My Social Media 💬
           </h1>
           <hr className="border-neutral-900 border-1" />
@@ -80,7 +80,7 @@ export default function about_me() {
 
         <hr className="border-neutral-900 border-1" />
 
-        <h2 className="flex xs:text-lg md:text-4xl justify-center py-4">
+        <h2 className="flex xs:text-lg md:text-4xl text-white justify-center py-4">
           {" "}
           👨🏻‍💻 &nbsp;A Little Bit About Me &nbsp; 👨🏻‍💻
         </h2>
@@ -180,7 +180,7 @@ export default function about_me() {
 
         <hr className="border-neutral-900 border-1" />
 
-        <h2 className="flex xs:text-lg md:text-4xl justify-center py-2">
+        <h2 className="flex xs:text-lg md:text-4xl text-white justify-center py-2">
           {" "}
           🚀 &nbsp;Some Tools / Languages I Use&nbsp; 🚀
         </h2>
