@@ -80,8 +80,8 @@ export default function Home() {
             href="/hub"
             className="xs:w-60 xs:h-32 md:w-48 md:h-36 lg:w-80 xl:h-48 border xs:m-2 xl:m-5 p-15 text-left no-underline border-[#374455] border-4 text-[#374455]  rounded-xl hover:scale-105 transition duration-700 ease-in-out hover:text-white  hover:border-white  "
           >
-            <div className="transition-all p-4">
-              <h2 className="flex flex-nowrap md:text-2xl lg:text-4xl m-1 hover:normal-case">
+            <div className="flex flex-nowrap transition-all p-4">
+              <h2 className="md:text-2xl lg:text-4xl m-1 hover:normal-case">
                 Bobby Hub &rarr;
               </h2>
               <p className="md:text-lg lg:text-2xl m-0 leading-6 hover:normal-case">
