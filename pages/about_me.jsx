@@ -1,8 +1,8 @@
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import { Overlay } from "../components/login";
-import { showlogin } from "../components/login";
+
+import Auth from "../components/auth";
 
 export default function about_me() {
   return (
@@ -17,10 +17,10 @@ export default function about_me() {
         <div className="flex justify-between">
           <Link href="/">
             <img
-              src="../assets/Navigation/Home.png"
+              src="../assets/Navigation/home.png"
               alt="Home"
               href="/"
-              className="xs:h-5 md:h-10 hover:scale-125 transition duration-700 ease-in-out"
+              className="xs:h-5 md:h-10 m-2 hover:scale-125 transition duration-700 ease-in-out"
             />
           </Link>
 
@@ -29,20 +29,10 @@ export default function about_me() {
             alt="Bobby68"
             className="xs:w-2/3 md:w-1/2"
           />
-
-          <Link href="" onClick={showlogin}>
-            <img
-              src="../assets/Navigation/login.png"
-              alt="Login"
-              href=""
-              className="xs:h-5 md:h-10 hover:scale-125 transition duration-700 ease-in-out"
-            />
-          </Link>
+          <Auth />
         </div>
 
         <span className="block mx-auto w-1/2"></span>
-
-        <Overlay />
 
         <div>
           <h1 className="flex xs:text-2xl md:text-4xl justify-center py-2">

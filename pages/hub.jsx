@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Link from "next/link";
+import { signIn, useSession } from "next-auth/react";
 
 import { Dashboard } from "../components/dashboard";
 import { ToDo } from "../components/todo";
@@ -8,6 +9,13 @@ import { Settings } from "../components/settings";
 import { Lists, updatelist } from "../components/lists";
 
 export default function Hub() {
+  const { status } = useSession({
+    required: true,
+    onUnauthenticated() {
+      window.location.href = signIn();
+    },
+  });
+
   let [dashboardToggled, isDashboardToggled] = useState(true);
   let [listsToggled, isListsToggled] = useState(false);
   let [todoToggled, isToDoToggled] = useState(false);
@@ -58,6 +66,14 @@ export default function Hub() {
     isCasinoToggled((casinoToggled = true));
     isSettingsToggled((settingsToggled = false));
   };
+
+  if (status === "loading") {
+    return (
+      <div>
+        <p>Loading...</p>
+      </div>
+    );
+  }
 
   return (
     <div className="font-poppins antialiased bg-[#161b22]">

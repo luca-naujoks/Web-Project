@@ -1,7 +1,5 @@
 import { useEffect, useState } from "react";
 import React from "react";
-import { listbtnbridge } from "../pages/hub";
-import { listsbtn } from "../pages/hub";
 
 export function Dashboard() {
   const [commits, setcommits] = useState("55");
@@ -79,10 +77,10 @@ export function Dashboard() {
         </div>
         <div className="bg-[#161b22] rounded-xl m-3 p-2 w-80">
           <h1 className="pb-2 md:text-2xl">Current Used ip adress</h1>
-          <p className="text-gray-500">
-            {showversion}: {showip}
-          </p>
-          <p className="text-gray-500">{shownetwork}</p>
+          <p className="text-gray-500">{showversion}:</p>
+          <p className="text-gray-400">{showip}</p>
+          <span className="text-gray-500">Network:</span>
+          <span className="text-gray-400"> {shownetwork}</span>
         </div>
         <div className="bg-[#161b22] rounded-xl m-3 p-2 w-80">
           <h1 className="pb-2 md:text-2xl">Loading...</h1>
