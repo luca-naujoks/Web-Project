@@ -27,7 +27,7 @@ export default function about_me() {
           <img
             src="/assets/about_me/header_image.png"
             alt="Bobby68"
-            className="md:hidden xl:w-2/3"
+            className="md:hidden"
           />
           <Auth />
         </div>
