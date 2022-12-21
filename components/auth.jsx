@@ -12,6 +12,9 @@ export default function Auth({ req }) {
   const clickOutside = (e) => {
     if (!node.current.contains(e.target)) {
       document.getElementById("dropdownmenu").classList.add("hidden");
+      document.getElementById("auth").classList.remove("bg-[#161b22]");
+      document.getElementById("auth").classList.remove("rounded-md");
+      document.getElementById("auth").classList.remove("m-1");
       return;
     }
   };
@@ -25,11 +28,14 @@ export default function Auth({ req }) {
 
   if (status === "authenticated") {
     return (
-      <div>
+      <div id="auth" className="">
         <a
           className="flex m-2 cursor-default items-center justify-center cursor-pointer"
           onClick={function () {
             document.getElementById("dropdownmenu").classList.remove("hidden");
+            document.getElementById("auth").classList.add("bg-[#161b22]");
+            document.getElementById("auth").classList.add("rounded-md");
+            document.getElementById("auth").classList.add("m-1");
           }}
         >
           <p className="xs:text-sm md:text-md">{session.user.name}&nbsp;</p>
@@ -38,11 +44,7 @@ export default function Auth({ req }) {
             className="rounded-full xs:h-5 md:h-10 "
           ></img>
         </a>
-        <div
-          ref={node}
-          id="dropdownmenu"
-          className="p-2 m-2 text-right bg-[#161b22] rounded-md hidden"
-        >
+        <div ref={node} id="dropdownmenu" className="p-2 m-2 text-right hidden">
           <p className="cursor-pointer">Profile</p>
           <p className="cursor-pointer">Settings</p>
           <p className="cursor-pointer" onClick={signOut}>

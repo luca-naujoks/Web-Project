@@ -7,6 +7,7 @@ export function updatelist(listpointer) {
   list = listpointer;
 }
 
+function opentodo() {}
 export function Lists() {
   const todos = localStorage.getItem(list).split(",");
   const todosdone = localStorage.getItem(list + ".done").split(",");
@@ -31,16 +32,10 @@ export function Lists() {
     ul.appendChild(li);
   }
 
-  function checkli(id) {
-    document.getElementById(id).classList.add("line-through");
-  }
-
-  function undo() {}
-
   return (
     <div id="main" className="overflow-hidden">
       <div id="headder" className="flex justify-center text-3xl font-bold p-4">
-        List Name
+        {list}
       </div>
       <div>
         <div id="list" className="flex text-white">
@@ -53,31 +48,7 @@ export function Lists() {
                 id={item}
                 key={item}
                 className="bg-[#161b22] text-xl rounded-md h-14 m-2 p-2 cursor-pointer"
-                onClick={function closetodo() {
-                  let activetodos = localStorage.getItem(list);
-                  let updatedactivetodos = activetodos.replace("," + item, "");
-                  localStorage.setItem(list, updatedactivetodos);
-
-                  let donetodos = localStorage.getItem(list + ".done");
-                  let updatedonetodos = donetodos + "," + item;
-                  localStorage.setItem(list + ".done", updatedonetodos);
-
-                  let ul = document.querySelector("#donetodolist");
-                  let li = document.createElement("li");
-                  li.textContent = item;
-                  li.setAttribute("id", item);
-                  console.log(item);
-                  li.setAttribute("onClick", "console.log('jo funzt')");
-                  li.setAttribute(
-                    "class",
-                    "bg-[#161b22] text-xl rounded-md h-14 m-2 p-2 cursor-pointer line-through"
-                  );
-                  ul.appendChild(li);
-
-                  let removetodo = document.querySelector("#todolist");
-                  let getitem = removetodo.getElementsByTagName("li")[item];
-                  removetodo.removeChild(getitem);
-                }}
+                onClick={closetodo(this)}
               >
                 <a>{item}</a>
               </li>

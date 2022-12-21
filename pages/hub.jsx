@@ -38,12 +38,6 @@ export default function Hub() {
     isCasinoToggled((casinoToggled = false));
     isSettingsToggled((settingsToggled = false));
     setTimeout(changelist, 100);
-    localStorage.setItem("Home", ",");
-    localStorage.setItem("Home.done", ",");
-    localStorage.setItem("Dailys", ",");
-    localStorage.setItem("Dailys.done", ",");
-    localStorage.setItem("Einkaufen", ",");
-    localStorage.setItem("Einkaufen.done", ",");
   };
 
   const changelist = () => {
