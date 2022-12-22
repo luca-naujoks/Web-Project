@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { useRef, useEffect } from "react";
 
-export default function Auth({ req }) {
+export function Auth({ req }) {
   const { data: session, status } = useSession();
 
   const node = useRef();
@@ -35,7 +35,6 @@ export default function Auth({ req }) {
             document.getElementById("dropdownmenu").classList.remove("hidden");
             document.getElementById("auth").classList.add("bg-[#161b22]");
             document.getElementById("auth").classList.add("rounded-md");
-            document.getElementById("auth").classList.add("m-1");
           }}
         >
           <p className="xs:text-sm md:text-md">{session.user.name}&nbsp;</p>
@@ -63,6 +62,32 @@ export default function Auth({ req }) {
         className="xs:h-5 md:h-10 hover:scale-125 transition duration-700 ease-in-out m-3"
       />
       <div ref={node} id="dropdownmenu"></div>
+      <div id="auth"></div>
     </a>
+  );
+}
+
+export function Welcome() {
+  const { data: session, status } = useSession();
+
+  if (status === "authenticated") {
+    return (
+      <div className="flex justify-center">
+        <p className="flex justify-center text-5xl">
+          Hello {session.user.name}
+        </p>
+      </div>
+    );
+  }
+
+  return (
+    <div className="flex flex-col">
+      <div className="flex justify-center text-5xl">
+        Hello and Welcome on my Website
+      </div>
+      <div className="flex justify-center text-5xl text-blue-400">
+        Bobby68.de
+      </div>
+    </div>
   );
 }

@@ -3,7 +3,9 @@
   width: 80%;
   height: 90%;
   position: absolute;
-  -wekbit-clip-path: url(#overlay);
-  clip-path: url(#overlay);
   top: -5%;
+  -webkit-position: absolute;
+  -webkit-z-index: -1;
+  -webkit-clip-path:url(#logo);
+
 }
