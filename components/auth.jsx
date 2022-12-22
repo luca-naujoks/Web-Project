@@ -1,4 +1,6 @@
 import { signIn, useSession, signOut } from "next-auth/react";
+import { TypingText } from "../components/typing";
+
 import Link from "next/link";
 import { useState } from "react";
 import { useRef, useEffect } from "react";
@@ -74,7 +76,7 @@ export function Welcome() {
     return (
       <div className="flex justify-center">
         <p className="flex justify-center text-5xl">
-          Hello {session.user.name}
+          <TypingText text={"Welcome back " + session.user.name} />
         </p>
       </div>
     );
@@ -83,10 +85,7 @@ export function Welcome() {
   return (
     <div className="flex flex-col">
       <div className="flex justify-center text-5xl">
-        Hello and Welcome on my Website
-      </div>
-      <div className="flex justify-center text-5xl text-blue-400">
-        Bobby68.de
+        <TypingText text="Hello and Welcome on Bobby68.de" />
       </div>
     </div>
   );
