@@ -5,6 +5,7 @@ export const TypingText = ({ text }) => {
   const [typing, setTyping] = useState(true);
 
   useEffect(() => {
+    setTimeout(100);
     const timeout = setTimeout(() => {
       setTextIndex(textIndex + 1);
       if (textIndex === text.length - 1) {
