@@ -42,7 +42,7 @@ export function Auth({ req }) {
           <p className="xs:text-sm md:text-md">{session.user.name}&nbsp;</p>
           <img
             src={session.user.image}
-            className="rounded-full xs:h-5 md:h-10 "
+            className="rounded-full xs:h-7 md:h-10 "
           ></img>
         </a>
         <div ref={node} id="dropdownmenu" className="p-2 m-2 text-right hidden">
@@ -61,7 +61,7 @@ export function Auth({ req }) {
       <img
         src="../assets/Navigation/login.png"
         alt="Login"
-        className="xs:h-5 md:h-10 hover:scale-125 transition duration-700 ease-in-out m-3"
+        className="xs:h-8 md:h-10 hover:scale-125 transition duration-700 ease-in-out m-3"
       />
       <div ref={node} id="dropdownmenu"></div>
       <div id="auth"></div>
