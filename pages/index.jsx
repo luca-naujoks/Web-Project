@@ -6,6 +6,7 @@ export default function Index() {
   return (
     <div id="container">
       <Head>
+        <meta name="keywords" content="bobby68, bobby68.de" />
         <title>Bobby68</title>
         <link rel="icon" href="/Axolotl_Logo.png" />
       </Head>
