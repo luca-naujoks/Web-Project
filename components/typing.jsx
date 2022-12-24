@@ -11,7 +11,7 @@ export const TypingText = ({ text }) => {
       if (textIndex === text.length - 1) {
         setTyping(false);
       }
-    }, 220);
+    }, 100);
     return () => clearTimeout(timeout);
   }, [textIndex]);
 

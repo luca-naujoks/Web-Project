@@ -55,7 +55,6 @@ export function Lists() {
             ))}
           </ul>
         </div>
-
         <hr />
 
         <div id="list" className="flex text-white">

@@ -24,7 +24,7 @@ export default function Index() {
       <div id="links" className="absolute bottom-[10%] w-screen">
         <div className="flex  justify-evenly">
           <a
-            href="about_me"
+            href="/about_me"
             className="border-4 border-[#374455] rounded-xl w-1/4 p-4 hover:scale-105 duration 700 transition ease-in-out text-white"
           >
             <h2 className="xs:text-xl md:text-2xl pb-2">About Me &rarr;</h2>
@@ -34,7 +34,7 @@ export default function Index() {
           </a>
 
           <a
-            id="nooble"
+            id="/nooble"
             href="nooble"
             className="border-4 border-[#374455] rounded-xl w-1/4 p-4 hover:scale-105 duration 700 transition ease-in-out text-white"
           >
@@ -46,7 +46,7 @@ export default function Index() {
           </a>
 
           <a
-            href="hub"
+            href="/hub"
             className="border-4 border-[#374455] rounded-xl w-1/4 p-4 hover:scale-105 duration 700 transition ease-in-out text-white"
           >
             <h2 className="xs:text-xl md:text-2xl pb-2">Bobby Hub &rarr;</h2>
