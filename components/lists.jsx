@@ -7,7 +7,6 @@ export function updatelist(listpointer) {
   list = listpointer;
 }
 
-function opentodo() {}
 export function Lists() {
   const todos = localStorage.getItem(list).split(",");
   const todosdone = localStorage.getItem(list + ".done").split(",");
@@ -28,9 +27,9 @@ export function Lists() {
       "class",
       "bg-[#161b22] text-xl rounded-md h-14 m-2 p-2 cursor-pointer"
     );
-
     ul.appendChild(li);
   }
+
 
   return (
     <div id="main" className="overflow-hidden">
@@ -48,13 +47,37 @@ export function Lists() {
                 id={item}
                 key={item}
                 className="bg-[#161b22] text-xl rounded-md h-14 m-2 p-2 cursor-pointer"
-                onClick={closetodo(this)}
+                onClick={function closetodo() {
+                  let todos = localStorage.getItem(list);
+                  let updatetodos = todos.replace("," + item, "");
+                  localStorage.setItem(list, updatetodos);
+
+                  let donetodos = localStorage.getItem(list + ".done");
+                  let updateactivetodos = donetodos + "," + item;
+                  localStorage.setItem(list + ".done", updateactivetodos);
+
+                  let ul = document.querySelector("#donetodolist");
+                  let li = document.createElement("li");
+                  li.textContent = item;
+                  li.setAttribute("id", item);
+                  console.log(item);
+                  li.setAttribute(
+                    "class",
+                    "bg-[#161b22] text-xl rounded-md h-14 m-2 p-2 cursor-pointer"
+                  );
+                  ul.appendChild(li);
+
+                  let removetodo = document.querySelector("#todolist");
+                  let getitem = removetodo.getElementsByTagName("li")[item];
+                  removetodo.removeChild(getitem);
+                }}
               >
                 <a>{item}</a>
               </li>
             ))}
           </ul>
         </div>
+        
         <hr />
 
         <div id="list" className="flex text-white">

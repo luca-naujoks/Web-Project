@@ -19,7 +19,7 @@ export default function Post({ postData }) {
 
           <div className="mt-3">
             <Link href="/nooble">
-              <text className="md:text-2xl hover:text-red-500">&#x2718;</text>
+              <p className="md:text-2xl hover:text-red-500">&#x2718;</p>
             </Link>
           </div>
         </div>
@@ -62,6 +62,7 @@ export default function Post({ postData }) {
             src={postData.image}
             className=""
             alt="LF Image"
+            priority
           />
         </main>
       </div>

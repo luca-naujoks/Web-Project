@@ -7,6 +7,7 @@ import { ToDo } from "../components/todo";
 import { Casino } from "../components/casino";
 import { Settings } from "../components/settings";
 import { Lists, updatelist } from "../components/lists";
+import { useEffect } from "react";
 
 export default function Hub() {
   const { status } = useSession({
@@ -15,6 +16,44 @@ export default function Hub() {
       window.location.href = signIn();
     },
   });
+
+  const [commitCount, setCommitCount] = useState(null);
+
+  useEffect(() => {
+    async function fetchCommitCount() {
+      const response = await fetch(
+        'https://api.github.com/repos/luca-naujoks/Web-Project'
+      );
+      const data = await response.json();
+      setCommitCount(data.commit_count);
+    }
+    fetchCommitCount();
+  }, []);
+
+useEffect(() => {
+
+  if (localStorage.getItem('Home') === null) {
+    localStorage.setItem('Home', '');
+  }
+  if (localStorage.getItem('Home.done') === null) {
+    localStorage.setItem('Home.done', '');
+  }
+
+  if (localStorage.getItem('Dailys') === null) {
+    localStorage.setItem('Dailys', '');
+  }
+  if (localStorage.getItem('Dailys.done') === null) {
+    localStorage.setItem('Dailys.done', '');
+  }
+
+  if (localStorage.getItem('Weeklys') === null) {
+    localStorage.setItem('Weeklys', '');
+  }
+  if (localStorage.getItem('Weeklys.done') === null) {
+    localStorage.setItem('Weeklys.done', '');
+  }
+})
+
 
   let [dashboardToggled, isDashboardToggled] = useState(true);
   let [listsToggled, isListsToggled] = useState(false);
@@ -79,7 +118,7 @@ export default function Hub() {
     <div className="font-poppins antialiased bg-[#161b22]">
       <div className=" bg-[#161b22] p-4 w-[100%]">
         <a href="/" className="flex justify-end md:text-2xl ">
-          <text className="hover:text-red-500">&#x2718;</text>
+          <p className="hover:text-red-500">&#x2718;</p>
         </a>
       </div>
       <div
@@ -181,7 +220,7 @@ export default function Hub() {
 
                 <a
                   key="Einkaufen"
-                  onClick={() => listsbtn("Einkaufen")}
+                  onClick={() => listsbtn("Weeklys")}
                   className="text-sm font-medium text-white py-2 px-2 hover:bg-gray-500 hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out cursor-pointer"
                 >
                   <img

@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import React from "react";
+import { commitCount } from "../pages/hub"
 
 export function Dashboard() {
-  const [commits, setcommits] = useState("55");
 
   const [showip, setshowip] = useState();
   const [showversion, setshowversion] = useState();
@@ -12,8 +12,6 @@ export function Dashboard() {
   const [showcity, setshowcity] = useState();
   const [showlan, setshowlan] = useState();
   const [showlon, setshowlon] = useState();
-
-  const ipapi = "https://ipapi.co/json";
 
   let displayIp;
   let displayVersion;
@@ -55,17 +53,15 @@ export function Dashboard() {
     <div id="main">
       <div id="line one" className="flex">
         <div className="bg-[#161b22] rounded-xl m-3 p-2 w-80 h-32">
-          <h1 className="pb-2 md:text-2xl">GitHub Pull Requests</h1>
+          <h1 className="pb-2 md:text-2xl">GitHub Repository</h1>
           <span className="text-gray-500">GitHub Repo:</span>
           <a
             href="https://github.com/luca-naujoks/web-project"
             target={"_blank"}
-            className="text-gray-400"
+            className="text-gray-400 cursor-pointer"
           >
-            {" "}
             Web-Project
           </a>
-          <p className="text-gray-600">{commits} commits</p>
         </div>
         <div className="bg-[#161b22] rounded-xl m-3 p-2 w-80">
           <h1 className="pb-2 md:text-2xl">Localisation</h1>
