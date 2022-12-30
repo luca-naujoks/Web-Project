@@ -63,7 +63,7 @@ export function Lists() {
                   console.log(item);
                   li.setAttribute(
                     "class",
-                    "bg-[#161b22] text-xl rounded-md h-14 m-2 p-2 cursor-pointer"
+                    "bg-[#161b22] text-xl rounded-md h-14 m-2 p-2 cursor-pointer line-through"
                   );
                   ul.appendChild(li);
 

@@ -370,7 +370,7 @@ export default function about_me() {
             <a
               href="https://discord.com/oauth2/authorize?client_id=864513968935927809&permissions=8&scope=bot"
               target="blank"
-              className="text-sky-400 font-mono hover:underline"
+              className="text-gray-500 font-mono underline"
             >
               here
             </a>

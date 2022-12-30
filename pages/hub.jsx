@@ -4,7 +4,6 @@ import { signIn, useSession } from "next-auth/react";
 
 import { Dashboard } from "../components/dashboard";
 import { ToDo } from "../components/todo";
-import { Casino } from "../components/casino";
 import { Settings } from "../components/settings";
 import { Lists, updatelist } from "../components/lists";
 import { useEffect } from "react";
@@ -22,7 +21,7 @@ export default function Hub() {
   useEffect(() => {
     async function fetchCommitCount() {
       const response = await fetch(
-        'https://api.github.com/repos/luca-naujoks/Web-Project'
+        "https://api.github.com/repos/luca-naujoks/Web-Project"
       );
       const data = await response.json();
       setCommitCount(data.commit_count);
@@ -30,42 +29,38 @@ export default function Hub() {
     fetchCommitCount();
   }, []);
 
-useEffect(() => {
+  useEffect(() => {
+    if (localStorage.getItem("Home") === null) {
+      localStorage.setItem("Home", "");
+    }
+    if (localStorage.getItem("Home.done") === null) {
+      localStorage.setItem("Home.done", "");
+    }
 
-  if (localStorage.getItem('Home') === null) {
-    localStorage.setItem('Home', '');
-  }
-  if (localStorage.getItem('Home.done') === null) {
-    localStorage.setItem('Home.done', '');
-  }
+    if (localStorage.getItem("Dailys") === null) {
+      localStorage.setItem("Dailys", "");
+    }
+    if (localStorage.getItem("Dailys.done") === null) {
+      localStorage.setItem("Dailys.done", "");
+    }
 
-  if (localStorage.getItem('Dailys') === null) {
-    localStorage.setItem('Dailys', '');
-  }
-  if (localStorage.getItem('Dailys.done') === null) {
-    localStorage.setItem('Dailys.done', '');
-  }
-
-  if (localStorage.getItem('Weeklys') === null) {
-    localStorage.setItem('Weeklys', '');
-  }
-  if (localStorage.getItem('Weeklys.done') === null) {
-    localStorage.setItem('Weeklys.done', '');
-  }
-})
-
+    if (localStorage.getItem("Weeklys") === null) {
+      localStorage.setItem("Weeklys", "");
+    }
+    if (localStorage.getItem("Weeklys.done") === null) {
+      localStorage.setItem("Weeklys.done", "");
+    }
+  });
 
   let [dashboardToggled, isDashboardToggled] = useState(true);
   let [listsToggled, isListsToggled] = useState(false);
   let [todoToggled, isToDoToggled] = useState(false);
-  let [casinoToggled, isCasinoToggled] = useState(false);
   let [settingsToggled, isSettingsToggled] = useState(false);
 
   const dashboardbtn = () => {
     isDashboardToggled((dashboardToggled = true));
     isListsToggled((listsToggled = false));
     isToDoToggled((todoToggled = false));
-    isCasinoToggled((casinoToggled = false));
     isSettingsToggled((settingsToggled = false));
   };
 
@@ -74,7 +69,6 @@ useEffect(() => {
     isDashboardToggled((dashboardToggled = false));
     isListsToggled((listsToggled = false));
     isToDoToggled((todoToggled = false));
-    isCasinoToggled((casinoToggled = false));
     isSettingsToggled((settingsToggled = false));
     setTimeout(changelist, 100);
   };
@@ -87,7 +81,6 @@ useEffect(() => {
     isDashboardToggled((dashboardToggled = false));
     isListsToggled((listsToggled = false));
     isToDoToggled((todoToggled = true));
-    isCasinoToggled((casinoToggled = false));
     isSettingsToggled((settingsToggled = false));
   };
 
@@ -95,7 +88,6 @@ useEffect(() => {
     isDashboardToggled((dashboardToggled = false));
     isListsToggled((listsToggled = false));
     isToDoToggled((todoToggled = false));
-    isCasinoToggled((casinoToggled = false));
     isSettingsToggled((settingsToggled = true));
   };
   const casinobtn = () => {
@@ -128,17 +120,17 @@ useEffect(() => {
       >
         <div
           id="sidebar"
-          className="flex justify-between bg-[#161b22] h-screen md:block shadow-xl px-3 w-30 md:w-[15%] transition-transform duration-300 ease-in-out"
+          className="flex justify-between bg-[#161b22] h-screen md:block shadow-xl px-3 xs:w-18 md:w-40 lg:w-[15%] transition-transform duration-300 ease-in-out"
           x-show="sidenav"
         >
           <div>
             <div className="flex border-2 border-gray-600 rounded-md mb-[5%]">
               <input
                 type="text"
-                className="w-full rounded-tl-md rounded-bl-md px-2 py-3 text-sm bg-[#161b22] text-white focus:outline-none"
+                className="w-full rounded-tl-md rounded-bl-md px-2 py-3 text-sm bg-[#161b22] text-white focus:outline-none xs:hidden md:block"
                 placeholder="Search"
               />
-              <button className="rounded-tr-md rounded-br-md px-2 py-3 hidden md:block">
+              <button className="rounded-tr-md rounded-br-md px-2 py-3 xs:hidden md:block">
                 <svg
                   className="w-4 h-4 fill-current"
                   fill="currentColor"
@@ -154,97 +146,89 @@ useEffect(() => {
               </button>
             </div>
             <div id="menu" className="flex flex-col">
-              <div className="flex flex-col space-y-2">
+              <div className="flex flex-col md:space-y-2">
                 <a
                   id="dashboardbtn"
                   onClick={dashboardbtn}
-                  className="hover:scale-105 text-sm font-medium text-white py-2 px-2 hover:bg-gray-500 hover:text-white hover:text-base rounded-md transition duration-150 ease-in-out cursor-pointer"
+                  className="hover:scale-105 text-sm font-medium text-white py-2 px-0 hover:bg-gray-500 hover:text-white hover:text-base rounded-md transition duration-150 ease-in-out cursor-pointer"
                 >
                   <img
                     src="../assets/hub/dashboard.png"
                     alt="dashboard"
                     className="w-8 h-8 fill-current inline-block "
                   />
-                  <span className="md:text-lg"> Dashboard</span>
+                  <span className="xs:hidden md:inline text-lg">
+                    {" "}
+                    Dashboard
+                  </span>
                 </a>
                 <a
-                  onClick={todobtn}
-                  className="text-sm font-medium text-white py-2 px-2 hover:bg-gray-500 hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out cursor-pointer"
+                  href="/hub/casino"
+                  className="text-sm font-medium text-white py-2 px-1 hover:bg-gray-500 hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out cursor-pointer"
                 >
                   <img
                     src="../assets/hub/lists.png"
                     alt="lists"
                     className="w-8 h-8 fill-current inline-block "
                   />
-                  <span className="md:text-lg"> ToDo</span>
-                </a>
-                <a
-                  onClick={casinobtn}
-                  className="text-sm font-medium text-white py-2 px-2 hover:bg-gray-500 hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out cursor-pointer"
-                >
-                  <img
-                    src="../assets/hub/lists.png"
-                    alt="lists"
-                    className="w-8 h-8 fill-current inline-block "
-                  />
-                  <span className="md:text-lg"> Casino</span>
+                  <span className="xs:hidden md:inline text-lg"> Casino</span>
                 </a>
 
-                <p className="text-center text-xl">Your Lists</p>
+                <p className="text-center xs:hidden md:block text-xl">
+                  Your Lists
+                </p>
                 <hr />
                 <a
                   key="Home"
                   onClick={() => listsbtn("Home")}
-                  className="text-sm font-medium text-white py-2 px-2 hover:bg-gray-500 hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out cursor-pointer"
+                  className="text-sm font-medium text-white py-2 px-1 hover:bg-gray-500 hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out cursor-pointer"
                 >
                   <img
                     src="../assets/hub/lists.png"
                     alt="lists"
                     className="w-8 h-8 fill-current inline-block "
                   />
-                  <span className="md:text-lg"> Home</span>
+                  <span className="xs:hidden md:inline text-lg"> Home</span>
                 </a>
 
                 <a
                   key="Dailys"
                   onClick={() => listsbtn("Dailys")}
-                  className="text-sm font-medium text-white py-2 px-2 hover:bg-gray-500 hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out cursor-pointer"
+                  className="text-sm font-medium text-white py-2 px-1 hover:bg-gray-500 hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out cursor-pointer"
                 >
                   <img
                     src="../assets/hub/lists.png"
                     alt="lists"
                     className="w-8 h-8 fill-current inline-block "
                   />
-                  <span className="md:text-lg"> Dailys</span>
+                  <span className="xs:hidden md:inline text-lg"> Dailys</span>
                 </a>
 
                 <a
                   key="Einkaufen"
                   onClick={() => listsbtn("Weeklys")}
-                  className="text-sm font-medium text-white py-2 px-2 hover:bg-gray-500 hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out cursor-pointer"
+                  className="text-sm font-medium text-white py-2 px-1 hover:bg-gray-500 hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out cursor-pointer"
                 >
                   <img
                     src="../assets/hub/lists.png"
                     alt="lists"
                     className="w-8 h-8 fill-current inline-block "
                   />
-                  <span className="md:text-lg"> Einkaufen</span>
+                  <span className="xs:hidden md:inline text-lg"> Weeklys</span>
+                </a>
+                <a
+                  onClick={settingsbtn}
+                  className="text-sm font-medium text-white py-2 px-1 hover:bg-gray-500 hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out cursor-pointer"
+                >
+                  <img
+                    src="../assets/hub/settings.png"
+                    alt="settings"
+                    className="w-8 h-8 fill-current inline-block "
+                  />
+                  <span className="xs:hidden md:inline text-lg"> Settings</span>
                 </a>
               </div>
             </div>
-          </div>
-          <div className="flex flex-col space-y-2]">
-            <a
-              onClick={settingsbtn}
-              className="text-sm font-medium text-white py-2 px-2 hover:bg-gray-500 hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out cursor-pointer"
-            >
-              <img
-                src="../assets/hub/settings.png"
-                alt="settings"
-                className="w-8 h-8 fill-current inline-block "
-              />
-              <span className="md:text-lg"> Settings</span>
-            </a>
           </div>
         </div>
 
@@ -258,11 +242,6 @@ useEffect(() => {
           {listsToggled && (
             <div id="Lists" className="">
               <Lists />
-            </div>
-          )}
-          {casinoToggled && (
-            <div id="Casino" className="">
-              <Casino />
             </div>
           )}
 

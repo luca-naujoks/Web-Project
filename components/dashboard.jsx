@@ -22,6 +22,12 @@ export function Dashboard() {
   let displayLan;
   let displayLon;
 
+  function copyip() {
+    navigator.clipboard.writeText(showip)
+  }
+  function copynetwork() {
+    navigator.clipboard.writeText(shownetwork)
+  }
   async function getipdata() {
     const response = await fetch("https://ipapi.co/json");
     const responseData = await response.json();
@@ -51,19 +57,19 @@ export function Dashboard() {
 
   return (
     <div id="main">
-      <div id="line one" className="flex">
-        <div className="bg-[#161b22] rounded-xl m-3 p-2 w-80 h-32">
+      <div id="random" className="flex">
+        <div className="bg-[#161b22] rounded-xl xs:my-3 xs:ml-2 md:m-3 p-2 w-80">
           <h1 className="pb-2 md:text-2xl">GitHub Repository</h1>
-          <span className="text-gray-500">GitHub Repo:</span>
+          <span className="text-gray-500">Repository:</span>
           <a
             href="https://github.com/luca-naujoks/web-project"
             target={"_blank"}
             className="text-gray-400 cursor-pointer"
           >
-            Web-Project
+            <p>Web-Project</p>
           </a>
         </div>
-        <div className="bg-[#161b22] rounded-xl m-3 p-2 w-80">
+        <div className="bg-[#161b22] rounded-xl xs:my-3 xs:mx-1 md:m-3 p-2 md:w-80 ">
           <h1 className="pb-2 md:text-2xl">Localisation</h1>
           <p className="text-gray-500">{showcountry}</p>
           <p className="text-gray-500">{showcity}</p>
@@ -71,14 +77,17 @@ export function Dashboard() {
             {showlan} {showlon}
           </p>
         </div>
-        <div className="bg-[#161b22] rounded-xl m-3 p-2 w-80">
-          <h1 className="pb-2 md:text-2xl">Current Used ip adress</h1>
+        <div className="bg-[#161b22] rounded-xl xs:my-3 xs:mr-2 md:m-3 p-2 w-80">
+          <h1 className="pb-2 xs:hidden md:text-2xl">Current Used ip adress</h1>
+          <h1 className="pb-2 xs:block md:hidden">Current IP</h1>
           <p className="text-gray-500">{showversion}:</p>
-          <p className="text-gray-400">{showip}</p>
+          <p className="text-gray-400 xs:hidden md:block">{showip}</p>
+          <p className="text-gray-400 xs:block md:hidden cursor-pointer" onClick={copyip}>Copy Ip</p>
           <span className="text-gray-500">Network:</span>
-          <span className="text-gray-400"> {shownetwork}</span>
+          <span className="text-gray-400 xs:hidden md:block"> {shownetwork}</span>
+          <span className="text-gray-400 xs:block md:hidden cursor-pointer" onClick={copynetwork}>Copy Network</span>
         </div>
-        <div className="bg-[#161b22] rounded-xl m-3 p-2 w-80">
+        <div className="bg-[#161b22] rounded-xl m-3 p-2 w-80 xs:hidden">
           <h1 className="pb-2 md:text-2xl">Loading...</h1>
           <div className="md:text-xl"></div>
         </div>
@@ -86,14 +95,14 @@ export function Dashboard() {
 
       <hr className="m-3 border-gray-600" />
 
-      <div id="line two" className="flex">
-        <div className="bg-[#161b22] rounded-xl m-3 p-2 w-80 h-64">
+      <div id="server data" className="flex">
+        <div className="bg-[#161b22] rounded-xl xs:my-3 xs:ml-2 md:m-3 p-2 w-80 h-64">
           <h1 className="pb-2 md:text-2xl text-gray-500">Server CPU Temp</h1>
           <div className="md:text-xl"></div>
           <p className="text-end pr-2 text-sm text-green-400">46°C</p>
           <div className="border-gray-600 border-2 rounded-lg"></div>
         </div>
-        <div className="bg-[#161b22] rounded-xl m-3 p-2 w-80">
+        <div className="bg-[#161b22] rounded-xl xs:my-3 xs:m-2 md:m-3 p-2 w-80">
           <h1 className="pb-2 md:text-2xl text-gray-500">Mailbox Storage</h1>
           <p className="md:text-xl pt-6 text-gray-600">Total Storage: </p>
           <p className="text-green-700">256 GB</p>
@@ -105,9 +114,9 @@ export function Dashboard() {
 
       <hr className="m-3 border-gray-600" />
 
-      <div id="line tree" className="flex">
+      <div id="todo btns" className="flex">
         <div
-          className="bg-[#161b22] rounded-xl m-3 p-2 w-80 hover:scale-105 duration-300 cursor-pointer"
+          className="bg-[#161b22] rounded-xl xs:my-3 xs:ml-2 md:m-3 p-2 w-80 hover:scale-105 duration-300 cursor-pointer"
           key="Home"
           onClick={() => listbtn("Home")}
         >
@@ -121,7 +130,7 @@ export function Dashboard() {
           </h1>
         </div>
 
-        <div className="bg-[#161b22] rounded-xl m-3 p-2 w-80 hover:scale-105 duration-300 cursor-pointer">
+        <div className="bg-[#161b22] rounded-xl xs:my-3 xs:m-2 md:m-3 p-2 w-80 hover:scale-105 duration-300 cursor-pointer">
           <h1 className="pb-2 md:text-2xl">
             <img
               src="../assets/hub/lists.png"
@@ -132,14 +141,14 @@ export function Dashboard() {
           </h1>
         </div>
 
-        <div className="bg-[#161b22] rounded-xl m-3 p-2 w-80 hover:scale-105 duration-300 cursor-pointer">
+        <div className="bg-[#161b22] rounded-xl xs:my-3 xs:mr-2 md:m-3 p-2 w-80 hover:scale-105 duration-300 cursor-pointer">
           <a className="pb-2 md:text-2xl">
             <img
               src="../assets/hub/lists.png"
               alt="lists"
               className="w-8 h-8 fill-current inline-block"
             />
-            <span className="text-gray-500"> Einkaufen</span>
+            <span className="text-gray-500"> Weekly</span>
           </a>
         </div>
       </div>
