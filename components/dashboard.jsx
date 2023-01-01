@@ -58,7 +58,7 @@ export function Dashboard() {
   return (
     <div id="main">
       <div id="random" className="flex">
-        <div className="bg-[#161b22] rounded-xl xs:my-3 xs:ml-2 md:m-3 p-2 w-80">
+        <div className="bg-[#161b22] rounded-xl xs:my-3 xs:ml-2 md:m-3 p-2 w-96">
           <h1 className="pb-2 md:text-2xl">GitHub Repository</h1>
           <span className="text-gray-500">Repository:</span>
           <a
@@ -69,7 +69,7 @@ export function Dashboard() {
             <p>Web-Project</p>
           </a>
         </div>
-        <div className="bg-[#161b22] rounded-xl xs:my-3 xs:mx-1 md:m-3 p-2 md:w-80 ">
+        <div className="bg-[#161b22] rounded-xl xs:my-3 xs:mx-1 md:m-3 p-2 md:w-96 ">
           <h1 className="pb-2 md:text-2xl">Localisation</h1>
           <p className="text-gray-500">{showcountry}</p>
           <p className="text-gray-500">{showcity}</p>
@@ -77,7 +77,7 @@ export function Dashboard() {
             {showlan} {showlon}
           </p>
         </div>
-        <div className="bg-[#161b22] rounded-xl xs:my-3 xs:mr-2 md:m-3 p-2 w-80">
+        <div className="bg-[#161b22] rounded-xl xs:my-3 xs:mr-2 md:m-3 p-2 w-96">
           <h1 className="pb-2 xs:hidden md:text-2xl">Current Used ip adress</h1>
           <h1 className="pb-2 xs:block md:hidden">Current IP</h1>
           <p className="text-gray-500">{showversion}:</p>
@@ -87,7 +87,7 @@ export function Dashboard() {
           <span className="text-gray-400 xs:hidden md:block"> {shownetwork}</span>
           <span className="text-gray-400 xs:block md:hidden cursor-pointer" onClick={copynetwork}>Copy Network</span>
         </div>
-        <div className="bg-[#161b22] rounded-xl m-3 p-2 w-80 xs:hidden">
+        <div className="bg-[#161b22] rounded-xl m-3 p-2 w-96 xs:hidden md:block">
           <h1 className="pb-2 md:text-2xl">Loading...</h1>
           <div className="md:text-xl"></div>
         </div>
@@ -96,13 +96,13 @@ export function Dashboard() {
       <hr className="m-3 border-gray-600" />
 
       <div id="server data" className="flex">
-        <div className="bg-[#161b22] rounded-xl xs:my-3 xs:ml-2 md:m-3 p-2 w-80 h-64">
+        <div className="bg-[#161b22] rounded-xl xs:my-3 xs:ml-2 md:m-3 p-2 w-96 h-64">
           <h1 className="pb-2 md:text-2xl text-gray-500">Server CPU Temp</h1>
           <div className="md:text-xl"></div>
           <p className="text-end pr-2 text-sm text-green-400">46°C</p>
           <div className="border-gray-600 border-2 rounded-lg"></div>
         </div>
-        <div className="bg-[#161b22] rounded-xl xs:my-3 xs:m-2 md:m-3 p-2 w-80">
+        <div className="bg-[#161b22] rounded-xl xs:my-3 xs:m-2 md:m-3 p-2 w-96">
           <h1 className="pb-2 md:text-2xl text-gray-500">Mailbox Storage</h1>
           <p className="md:text-xl pt-6 text-gray-600">Total Storage: </p>
           <p className="text-green-700">256 GB</p>
@@ -116,7 +116,7 @@ export function Dashboard() {
 
       <div id="todo btns" className="flex">
         <div
-          className="bg-[#161b22] rounded-xl xs:my-3 xs:ml-2 md:m-3 p-2 w-80 hover:scale-105 duration-300 cursor-pointer"
+          className="bg-[#161b22] rounded-xl xs:my-3 xs:ml-2 md:m-3 p-2 w-96 hover:scale-105 duration-300 cursor-pointer"
           key="Home"
           onClick={() => listbtn("Home")}
         >
@@ -130,7 +130,7 @@ export function Dashboard() {
           </h1>
         </div>
 
-        <div className="bg-[#161b22] rounded-xl xs:my-3 xs:m-2 md:m-3 p-2 w-80 hover:scale-105 duration-300 cursor-pointer">
+        <div className="bg-[#161b22] rounded-xl xs:my-3 xs:m-2 md:m-3 p-2 w-96 hover:scale-105 duration-300 cursor-pointer">
           <h1 className="pb-2 md:text-2xl">
             <img
               src="../assets/hub/lists.png"
@@ -141,7 +141,7 @@ export function Dashboard() {
           </h1>
         </div>
 
-        <div className="bg-[#161b22] rounded-xl xs:my-3 xs:mr-2 md:m-3 p-2 w-80 hover:scale-105 duration-300 cursor-pointer">
+        <div className="bg-[#161b22] rounded-xl xs:my-3 xs:mr-2 md:m-3 p-2 w-96 hover:scale-105 duration-300 cursor-pointer">
           <a className="pb-2 md:text-2xl">
             <img
               src="../assets/hub/lists.png"
